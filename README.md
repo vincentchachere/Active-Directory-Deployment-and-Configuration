@@ -204,7 +204,7 @@ Now you can Remote Desktop (RDP) into DC-1 and disable the Windows Firewall so w
 
 ### 4.A ) Create Client-1 VM
 
-<ins>Within you Network Tab</ins>:
+<ins>Within your Network Tab</ins>:
 
 - Choose the `Same Virtual Network and Subnet` as your Domain Controller
    
