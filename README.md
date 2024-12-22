@@ -694,6 +694,8 @@ Select: `OK`
 <br>
 <br>
 
+<ins>Within Active Directory Users and Computers</ins>:
+
 Click: `_CLIENTS` and you will see Client-1 inside there
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
