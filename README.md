@@ -312,18 +312,6 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ***
 
-Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.
-
-- The DC-1 will now restart to complete its promotion to a Domain Controller.
-
-- Once that's finished log back into DC-1 as:
-
-  - Username: `mydomain.com\labuser`
-
-  - Password: `TheSamePasswordYou'veBeenUsing`
-
-- *Make sure to use a backslash ( \ ) NOT a forward slash ( / ) or you will not be able to login.*
-
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/7c73b736-cf0e-4545-a6d9-683b9ecf90ea">
 
 ***
@@ -364,7 +352,23 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 ***
 
+- The DC-1 will now restart to complete its promotion to a Domain Controller.
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/126fa108-df23-44f3-87ef-b1f58cfe7aea">
+
+***
+
+Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.
+
+- For this lab you can log back into DC-1 as:
+
+  - Username: `mydomain.com\labuser`
+
+  - Password: `TheSamePasswordYou'veBeenUsing`
+
+- *Make sure to use a backslash ( \ ) NOT a forward slash ( / ) or you will not be able to login.*
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8489277b-b15e-4ebc-947d-11c5a1988046">
 
 ***
 
@@ -408,7 +412,7 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 ### 11. ) Join Client-1 to Domain Controller
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8489277b-b15e-4ebc-947d-11c5a1988046">
+<img width="800" alt="isolated" src="">
 
 ***
 
