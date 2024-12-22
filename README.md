@@ -374,39 +374,51 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 ### 10. ) Create a Domain Admin User within the Domain D-1 VM
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/190b5ddf-a472-4fc6-8195-819cab80ada6">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/eb3f4120-b273-4901-b111-75081f98ea10">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/20ee7889-bf7a-4925-8d71-23711ed14f00">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bb799a7b-360b-455b-a480-f1b35549135f">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/911fdd20-3880-4ac9-92dc-d59cb5c2a4d6">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/886a3780-b19c-4802-be42-453199b288d0">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/dcb94011-6685-4c85-b501-7a0834d0b1d1">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d4b8977b-e96e-4da4-b683-4a8115ea2fb7">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/082a8038-dd74-407b-99f1-ba4c43210405">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c3fd5780-1fba-4847-9f73-89502b69ac53">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/06db3f2f-a19e-4baf-adc4-22aa750bef4a">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3c0508eb-56f6-4de5-9938-89324722b547">
 
 ***
 
