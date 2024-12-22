@@ -86,7 +86,7 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
   - Region: `East US`
 
   - Image: `Windows Server 2022 Datacenter: Azure Edition - x64 Gen2`
-    - *Make sure to choose the right one here or it will mess up when setting up your domain controller*
+    - *Make sure to choose the correct VM image, or setting up the Domain Controller may fail.*
    
   - Size: `Standard_D2s_v3 - 2 vcpus, 8 GiB memory ($137.24/month)`
 
@@ -134,6 +134,8 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 <br>
 <br>
 
+<ins>Setting DC-1’s Private IP address to be static</ins>:
+
 - Resource Group > DC-1 > Network Settings > `Network Interface` (dc-1139_z1) > `ipconfig1`
 
   - Select: `Static`
@@ -148,7 +150,7 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
 ### 3. ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
 
-Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready to test the connectivity from Client-1 to DC-1 by pinging DC-1 from the Client-1 VM.
+Now you can Remote Desktop (RDP) into DC-1 and enable the two ICMPv4 inbound rules to prepare for ping testing from Client-1 to DC-1.
 
 <ins>Once inside DC-1</ins>:
 
@@ -160,11 +162,13 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 <br>
 <br>
 
-- Look for the rules with Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)
+<ins>Enabling the Two ICMPv4 Inbound Rules</ins>:
+
+*Look for the rules with Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)*
 
 - Enable: `Both ICMPv4 Inbound Rules` (There are <ins>two</ins> you need to enable)
 
-  - *They should have two green check marks next to them when you enable them just like the others.*
+*They should have two green check marks next to them when you enable them just like the others.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3b0ec287-a457-4508-a08c-fb6c0c3b1c39">
 
@@ -224,7 +228,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 <br>
 <br>
 
-<ins>Setting DC-1’s Private IP address to be static</ins>:
+<ins>Setting Client's DNS servers to DC-1's Private IP Address</ins>:
 
 - Go To: Resource Group > Client-1 > Network Settings > Network Interface (client-160_z1) > `DNS servers`
 
