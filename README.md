@@ -73,7 +73,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 </summary>
 
-### 1. ) Create Domain Controller (DC-1)
+### 1.A ) Create Domain Controller (DC-1)
 
 First, create a resource group to host the virtual machines: DC-1 (Domain Controller) and Client-1.
 
@@ -98,12 +98,11 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
   - Go To: `Networking` Tab for Step 1.A so that you can create your Virtual Network and Subnet
 
-<img width="800" alt="isolated" src="">
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/de53543c-2bef-488e-8f95-a10422ed15ce">
 
 ***
 
-### 1.A ) Create Virtual Network and Subnet
+### 1.B ) Create Virtual Network and Subnet
 
   - Virtual Network: `Active-Directory-Vnet`
 
@@ -115,11 +114,11 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
   - Click:  `Create`
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/0eccc2b2-0b13-4351-8315-b84b42e26d1a">
 
 ***
 
-### 2. ) Set Domain Controller's (DC-1) NIC Private IP Address to be Static
+### 2.A ) Set Domain Controller's (DC-1) NIC Private IP Address to be Static
 
 - Go To: `DC-1's NIC Private IP Address`
 
@@ -129,7 +128,7 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
 ***
 
-### 2.A ) Set Domain Controller's (DC-1) NIC Private IP Address to be Static
+### 2.B ) Set Domain Controller's (DC-1) NIC Private IP Address to be Static
 
 - Resource Group > DC-1 > Network Settings > `Network Interface` (dc-1139_z1) > `ipconfig1`
 
@@ -141,7 +140,7 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
 ***
 
-### 3. ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
+### 3.A ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
 
 Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready to test the connectivity from Client-1 to DC-1 by pinging DC-1 from the Client-1 VM.
 
@@ -153,7 +152,7 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 ***
 
-### 3.A ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
+### 3.B ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
 
 - Look for the rules with Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)
 
@@ -165,7 +164,7 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 ***
 
-### 4. ) Create Client-1 VM
+### 4.A ) Create Client-1 VM
 
 <ins>So similar to creating your domain controller, here are your Client-1 Configurations</ins>:
 
@@ -191,7 +190,7 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 ***
 
-### 4.A ) Create Client-1 VM
+### 4.B ) Create Client-1 VM
 
 <ins>Within your Network Tab</ins>:
 
@@ -203,7 +202,7 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 ***
 
-### 5. ) Set Client-1’s DNS settings to DC-1’s Private IP address
+### 5.A ) Set Client-1’s DNS settings to DC-1’s Private IP address
 
 So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, which will allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).
 
@@ -213,7 +212,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ***
 
-### 5.A ) Set Client-1’s DNS settings to DC-1’s Private IP address
+### 5.B ) Set Client-1’s DNS settings to DC-1’s Private IP address
 
 - Go To: Resource Group > Client-1 > Network Settings > Network Interface (client-160_z1) > `DNS servers`
 
@@ -227,7 +226,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ***
 
-### 5.B ) Set Client-1’s DNS settings to DC-1’s Private IP address
+### 5.C ) Set Client-1’s DNS settings to DC-1’s Private IP address
 
 <ins>Now for the DNS Settings to sync in you must restart you Client-1's VM so</ins>:
 
