@@ -432,11 +432,21 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 ### 10. ) Create a Domain Admin User within the Domain D-1 VM
 
+Now you can log back into DC-1 as domain.com\labuser, create two organizational units called _EMPLOYEES and _ADMINS, then add a new domain admin user. Mine will be named Jane Doe (You can name yours the same or something different, just remember it).
+
+- Go To: `Active Directory Users and Computers` (ADUC)
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/190b5ddf-a472-4fc6-8195-819cab80ada6">
 
 <br>
 <br>
 <br>
+
+<ins>Within Active Directory Users and Computers</ins>:
+
+Create an Organizational Unit (OU) called “_EMPLOYEES”
+
+- Right-Click: `domain.com` > Select: `New` > Select: `Organizational Unit`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/eb3f4120-b273-4901-b111-75081f98ea10">
 
@@ -444,11 +454,27 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 <br>
 <br>
 
+<ins>Within New Object - Organzational Unit</ins>:
+
+- Name: `_EMPLOYEES`
+
+*Make sure to spell it exactly as you see it or the scripts and policies referencing it may fail.*
+
+<ins>Remember to Create the ADMINS Organizational Unit</ins>:
+
+- Right-Click: `domain.com` > Select: `New` > Select: `Organizational Unit`
+
+- Name: `_ADMINS`
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/20ee7889-bf7a-4925-8d71-23711ed14f00">
 
 <br>
 <br>
 <br>
+
+<ins>Back in Active Directory Users and Computers Create Your Domain User</ins>:
+
+- Click: `_ADMINS` > Right-Click: `the empty space` > Select: `New` > Select: `User`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bb799a7b-360b-455b-a480-f1b35549135f">
 
@@ -456,15 +482,39 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 <br>
 <br>
 
+<ins>Within New Object - User</ins>:
+
+- First Name: `Jane`
+
+- Last Name: `Doe`
+
+- Change User Logon Name To: `jane_admin` (The first name of your created domain user then underscore admin.)
+
+- Click: `Next`
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/911fdd20-3880-4ac9-92dc-d59cb5c2a4d6">
 
 <br>
 <br>
 <br>
 
+<ins>Within New Object - User</ins>:
+
+- Password: `SomethingYouCanRemember`
+
+- Check: `Password never expires` (Normally you do not want to do this, but for the simplicity of the lab we will.)
+
+- Click: `Next`
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/886a3780-b19c-4802-be42-453199b288d0">
 
-***
+<br>
+<br>
+<br>
+
+<ins>Within New Object - User</ins>:
+
+- Click: `Finish`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/dcb94011-6685-4c85-b501-7a0834d0b1d1">
 
@@ -472,11 +522,25 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 <br>
 <br>
 
+<ins>Back in Active Directory Users and Computers</ins>
+
+- Click: `_ADMINS`
+
+- Right-Click: `Jane Doe` (The Name of Your Domain User)
+
+- Select: `Properties`
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d4b8977b-e96e-4da4-b683-4a8115ea2fb7">
 
 <br>
 <br>
 <br>
+
+<ins>Within Jane Doe Properties</ins>:
+
+- Go To: `Member Of`
+
+- Select: `Add`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/082a8038-dd74-407b-99f1-ba4c43210405">
 
@@ -484,17 +548,35 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 <br>
 <br>
 
+<ins>Within the Select Groups Windows</in>:
+
+- Type In: `Domain Admins`
+
+- Click: `Check Names`
+
+- Click: `OK`
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c3fd5780-1fba-4847-9f73-89502b69ac53">
 
 <br>
 <br>
 <br>
 
+<ins>Bak in Jane Doe Properties</ins>:
+
+- Click: `Apply`
+
+- Click: `OK`
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/06db3f2f-a19e-4baf-adc4-22aa750bef4a">
 
 <br>
 <br>
 <br>
+
+Now you can log out / close the connection to DC-1 and:
+
+- Log back into DC-1 as: `mydomain.com\jane_admin` (the first name of your domain user then underscore admin with mydomain.com attached to the front)
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3c0508eb-56f6-4de5-9938-89324722b547">
 
