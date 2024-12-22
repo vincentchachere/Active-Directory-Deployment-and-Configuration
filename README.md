@@ -52,7 +52,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 #### Part 1: Building the Infrastructure
 - Setup Domain Controller (Windows Server 2022) in Azure named "DC-1"
 - Set Domain Controller's (DC-1's) NIC Private IP address to be static
-- Log into DC-1 VM and disable the Windows Firewall (for testing connectivity)
+- Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
 - Setup Client-1 VM (Windows 10 (21H2)) in Azure named "Client-1"
 - Attempt to ping DC-1's Private IP Address from Client-1 VM
 
@@ -141,7 +141,7 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
 ***
 
-### 3. ) Log into DC-1 VM and Enable ICMPv4 (for testing connectivity)
+### 3. ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
 
 Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready to test the connectivity from Client-1 to DC-1 by pinging DC-1 from the Client-1 VM.
 
@@ -153,7 +153,7 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 ***
 
-### 3.A ) Log into DC-1 and Enable ICMPv4 (for testing connectivity)
+### 3.A ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
 
 - Enable: `Both ICMPv4 Inbound Rules` (There are <ins>two</ins> you need to enable)
 
