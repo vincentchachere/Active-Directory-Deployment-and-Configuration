@@ -73,7 +73,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 </summary>
 
-### 1.A ) Create Domain Controller (DC-1)
+### 1. ) Create Domain Controller (DC-1)
 
 First, create a resource group to host the virtual machines: DC-1 (Domain Controller) and Client-1.
 
@@ -100,9 +100,11 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/de53543c-2bef-488e-8f95-a10422ed15ce">
 
-***
+<br>
+<br>
+<br>
 
-### 1.B ) Create Virtual Network and Subnet
+<ins>Within your Network tab</ins>:
 
   - Virtual Network: `Active-Directory-Vnet`
 
@@ -116,9 +118,11 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/0eccc2b2-0b13-4351-8315-b84b42e26d1a">
 
-***
+<br>
+<br>
+<br>
 
-### 2.A ) Set Domain Controller's (DC-1) NIC Private IP Address to be Static
+### 2. ) Set Domain Controller's (DC-1) NIC Private IP Address to be Static
 
 - Go To: `DC-1's NIC Private IP Address`
 
@@ -126,9 +130,9 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/fd418504-f33c-4938-b41d-52e5326486b7">
 
-***
-
-### 2.B ) Set Domain Controller's (DC-1) NIC Private IP Address to be Static
+<br>
+<br>
+<br>
 
 - Resource Group > DC-1 > Network Settings > `Network Interface` (dc-1139_z1) > `ipconfig1`
 
@@ -138,9 +142,11 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c017c1de-e443-4abe-963b-ede58dceb837">
 
-***
+<br>
+<br>
+<br>
 
-### 3.A ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
+### 3. ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
 
 Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready to test the connectivity from Client-1 to DC-1 by pinging DC-1 from the Client-1 VM.
 
@@ -150,9 +156,9 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/aad49eba-fdb0-4671-bfae-8d28a4b7bb95">
 
-***
-
-### 3.B ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
+<br>
+<br>
+<br>
 
 - Look for the rules with Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)
 
@@ -162,9 +168,11 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3b0ec287-a457-4508-a08c-fb6c0c3b1c39">
 
-***
+<br>
+<br>
+<br>
 
-### 4.A ) Create Client-1 VM
+### 4. ) Create Client-1 VM
 
 <ins>So similar to creating your domain controller, here are your Client-1 Configurations</ins>:
 
@@ -188,9 +196,9 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d68b9dde-7cf9-4c3b-9a3b-54b07117a782">
 
-***
-
-### 4.B ) Create Client-1 VM
+<br>
+<br>
+<br>
 
 <ins>Within your Network Tab</ins>:
 
@@ -200,9 +208,11 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f60620f6-dfdf-4c06-8cc4-58bc7cdfa909">
 
-***
+<br>
+<br>
+<br>
 
-### 5.A ) Set Client-1’s DNS settings to DC-1’s Private IP address
+### 5. ) Set Client-1’s DNS settings to DC-1’s Private IP address
 
 So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, which will allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).
 
@@ -210,9 +220,9 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2be62c15-ec58-4afe-8579-2e0bd3929243">
 
-***
-
-### 5.B ) Set Client-1’s DNS settings to DC-1’s Private IP address
+<br>
+<br>
+<br>
 
 - Go To: Resource Group > Client-1 > Network Settings > Network Interface (client-160_z1) > `DNS servers`
 
@@ -224,9 +234,9 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c0e0d75a-6a25-4fd1-9c76-d50539b68c97">
 
-***
-
-### 5.C ) Set Client-1’s DNS settings to DC-1’s Private IP address
+<br>
+<br>
+<br>
 
 <ins>Now for the DNS Settings to sync in you must restart you Client-1's VM so</ins>:
 
@@ -238,7 +248,9 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/b5c26b71-a822-46b3-a7ca-7fe04ead9877">
 
-***
+<br>
+<br>
+<br>
 
 ### 6. ) Attempt to Ping DC-1’s Private IP address from Client-1 VM
 
@@ -246,7 +258,9 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2bfa98e9-d1db-4e19-a9f3-3d23b5701ee6">
 
-***
+<br>
+<br>
+<br>
 
 ### 7. ) From Client-1 VM Open PowerShell and Run: ipconfig /all
 
@@ -256,7 +270,9 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/da8e2d18-ec3e-4cef-b395-88e9d6cfe263">
 
-***
+<br>
+<br>
+<br>
 
 </details>
 
