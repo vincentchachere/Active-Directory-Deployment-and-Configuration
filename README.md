@@ -155,6 +155,8 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 ### 3.A ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
 
+- Look for the rules with Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)
+
 - Enable: `Both ICMPv4 Inbound Rules` (There are <ins>two</ins> you need to enable)
 
   - *They should have two green check marks next to them when you enable them just like the others.*
