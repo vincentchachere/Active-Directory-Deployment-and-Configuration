@@ -318,7 +318,35 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ### 9. ) Create a Domain Admin User within the Domain D-1 VM
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/377ca48e-b056-46a5-8504-9afa07a31297">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/47cd8d56-987c-4a4e-b2b8-4f586e2f85e8">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/fedd52a0-48d0-4c63-8adb-0c824671e1ae">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/35e80bf5-5348-4c1e-94c9-68cfe5f88de2">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6c03ba31-2e37-415a-bbd4-c993302a9e26">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/49bf91db-dd67-4e24-b1b3-09d8a6248db2">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/572f8848-94bd-49e9-9a33-692792af4d9f">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8d940c8e-4b2a-49be-a7af-3c8ad8a840f3">
 
 ***
 
