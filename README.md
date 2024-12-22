@@ -456,6 +456,18 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 ***
 
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/94dc4c1b-eba9-4594-9429-bb83859bc9a8">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
+
+***
+
 ### 12. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
 
 <img width="800" alt="isolated" src="">
