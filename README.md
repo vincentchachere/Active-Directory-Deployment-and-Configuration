@@ -816,7 +816,7 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 
 <ins>Once inside Command Prompt</ins>:
 
-Notice the Users name is the Created Users Name.
+Notice the created user's name displayed in the path.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bbb2ff68-8c58-4936-a0ff-503cb2584124">
 
