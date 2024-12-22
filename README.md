@@ -316,7 +316,9 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ***
 
-### 9. ) Create a Domain Admin User within the Domain D-1 VM
+### 9. ) Promote as a DC: Setup a new forest as mydomain.com
+
+- *This can be anything, just remember what it is.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/377ca48e-b056-46a5-8504-9afa07a31297">
 
@@ -354,7 +356,45 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ***
 
-### 10. ) Join Client-1 to Domain Controller
+### 10. ) Create a Domain Admin User within the Domain D-1 VM
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+### 11. ) Join Client-1 to Domain Controller
 
 Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.
 
@@ -368,19 +408,13 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 ***
 
-### 11. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
+### 12. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
 
 <img width="800" alt="isolated" src="">
 
 ***
 
-### 12. ) Attempt to log into Client-1 with one of the Created Users
-
-<img width="800" alt="isolated" src="">
-
-***
-
-### 13. ) 
+### 13. ) Attempt to log into Client-1 with one of the Created Users
 
 <img width="800" alt="isolated" src="">
 
