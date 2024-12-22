@@ -207,8 +207,8 @@ Now you can Remote Desktop (RDP) into DC-1 and enable the two ICMPv4 inbound rul
 <ins>Within your Network Tab</ins>:
 
 - Choose the `Same Virtual Network and Subnet` as your Domain Controller
-   
-    - *This part is crucial. If your Client-1 VM and Domain Controller are not on the same VNET and Subnet they will be unable to communicate, preventing domain-related operations like joining the domain or authenticating.*
+
+*This part is crucial. If your Client-1 VM and Domain Controller are not on the same VNET and Subnet they will be unable to communicate, preventing domain-related operations like joining the domain or authenticating.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f60620f6-dfdf-4c06-8cc4-58bc7cdfa909">
 
@@ -250,7 +250,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 - Restart: `Client-1` VM when done doing this
 
-   - *If you do not restart your Client-1 VM after setting it's DNS Server to DC-1’s Private IP address then it will not successfully allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).*
+*If you do not restart your Client-1 VM after setting it's DNS Server to DC-1’s Private IP address then it will not successfully allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/b5c26b71-a822-46b3-a7ca-7fe04ead9877">
 
@@ -260,7 +260,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ### 6. ) Attempt to Ping DC-1’s Private IP address from Client-1 VM
 
-- If everything is setup correctly so far then you should have a successful ping from Client-1 to DC-1.
+If everything is setup correctly so far then you should have a successful ping from Client-1 to DC-1.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2bfa98e9-d1db-4e19-a9f3-3d23b5701ee6">
 
@@ -272,7 +272,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 - The `DNS Server` should show DC-1’s Private IP Address as shown in the image below.
 
-  - If the DNS server on Client-1 is not set to DC-1's private IP (e.g., it shows 168.63.129.16), update the DNS settings manually to DC-1's private IP. Restarting Client-1's VM may also help apply the changes. If successful, the client may log you out, indicating it's trying to connect to the domain.
+*If the DNS server on Client-1 is not set to DC-1's private IP (e.g., it shows 168.63.129.16), update the DNS settings manually to DC-1's private IP. Restarting Client-1's VM may also help apply the changes. If successful, the client may log you out, indicating it's trying to connect to the domain.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/da8e2d18-ec3e-4cef-b395-88e9d6cfe263">
 
@@ -294,7 +294,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 <ins>Go to the Domain Controller (DC-1) and in Server Manager Dashboard</ins>:
 
-- Click": `Add roles and features`
+- Click: `Add roles and features`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4109a1e0-694c-4404-9109-4c69f23ca2ce">
 
@@ -422,7 +422,7 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
   - Password: `TheSamePasswordYou'veBeenUsing`
 
-- *Make sure to use a backslash ( \ ) NOT a forward slash ( / ) or you will not be able to login.*
+*Make sure to use a backslash ( \ ) NOT a forward slash ( / ) or you will not be able to login.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8489277b-b15e-4ebc-947d-11c5a1988046">
 
