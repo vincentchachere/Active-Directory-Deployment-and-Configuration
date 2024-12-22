@@ -826,7 +826,7 @@ Notice the Users name is the Created Users Name.
 
 <ins>Navigate to File Explorer</ins>:
 
-- Go to: This PC > Windows (C:) > Users
+- Go to: `This PC` > `Windows (C:)` > `Users`
 
 Take notice that the created user's name is shown in here because you logged into the Client VM with that account.
 
