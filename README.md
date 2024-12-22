@@ -98,8 +98,8 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
   - Go To: `Networking` Tab for Step 1.A so that you can create your Virtual Network and Subnet
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/634d8ac0-bea6-43fd-8aff-d83c77d754b5">
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f8677c03-b2a1-4d96-a7d6-73dedc966bfe">
+<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="">
 
 ***
 
@@ -115,7 +115,7 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
   - Click:  `Create`
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/96a240c7-0f58-4546-9396-9daea85d85fe">
+<img width="800" alt="isolated" src="">
 
 ***
 
@@ -125,7 +125,7 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
   - Resource Group > DC-1 > Network Settings > `Network Interface` (dc-1139_z1) > `ipconfig1`
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8157e36d-83eb-4b6c-8b54-a76fc77c9145">
+<img width="800" alt="isolated" src="">
 
 ***
 
@@ -137,48 +137,42 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
   - Click: `Save`
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/235993e5-227e-45cb-80c7-3bc3490de57b">
+<img width="800" alt="isolated" src="">
 
 ***
 
 ### 3. ) Log into DC-1 VM and Disable the Windows Firewall (for testing connectivity)
 
-Now you can Remote Desktop (RDP) into DC-1 and disable the Windows Firewall so we can be ready to test the connectivity from Client-1 to DC-1 by pinging DC-1 from the Client-1 VM.
+Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready to test the connectivity from Client-1 to DC-1 by pinging DC-1 from the Client-1 VM.
 
-  - Copy and Paste: `DC-1 Public IP Address` into RDP app
+- 
 
-  - Input: `Username and Password` you made when creating you Domain Controller
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f30b969a-fe63-47af-ba82-9584b976b0c9">
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/eb2a5b62-fa30-46ff-b4a3-fff86d72af03">
+<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="">
 
 ### 3.A ) Log into DC-1 VM and Disable the Windows Firewall (for testing connectivity)
 
 - Once inside DC-1 search: `wf.msc` (Windows Firewall - Microsoft)
 
-- Turn off Firewall State for: `Domain Profile`
+- 
 
-- Turn off Firewall State for: `Public Profile`
+- 
 
-- Select: `Apply`
-
-- Click: `OK`
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/20756d48-363a-4843-b127-4bf9771d4d27">
+<img width="800" alt="isolated" src="">
 
 ***
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/a65dccf4-00e9-4e94-ab20-5e83acf7e253">
+<img width="800" alt="isolated" src="">
 
 ***
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4c4cf756-bea9-4efa-9e52-47a79595a532">
+<img width="800" alt="isolated" src="">
 
 ***
 
 ### 4. ) Create Client-1 VM
 
-<ins>So similar to creating you domain controller, here are your Client-1 Configurations</ins>:
+<ins>So similar to creating your domain controller, here are your Client-1 Configurations</ins>:
 
 - Resource Group: `Active-Directory-Lab` (Same as your Domain Controller: DC-1)
 
@@ -198,7 +192,7 @@ Now you can Remote Desktop (RDP) into DC-1 and disable the Windows Firewall so w
 
 - Go To: `Networking` Tab
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/50418389-0e5b-4a63-8ffe-49a7ecc71bee">
+<img width="800" alt="isolated" src="">
 
 ***
 
@@ -210,7 +204,7 @@ Now you can Remote Desktop (RDP) into DC-1 and disable the Windows Firewall so w
    
     - *This part is crucial. If your Client-1 VM and Domain Controller are not on the same VNET and Subnet they will be unable to communicate, preventing domain-related operations like joining the domain or authenticating.*
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/0c987656-62e0-4b28-9597-38c5b973ee10">
+<img width="800" alt="isolated" src="">
 
 ***
 
@@ -222,7 +216,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 - Resource Group > Client-1 > Network Settings > `Network Interface (client-160_z1)` > `DNS servers`
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d3608405-a2aa-406f-a1c9-1ac73fed7407">
+<img width="800" alt="isolated" src="">
 
 ***
 
@@ -238,7 +232,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 - Click: `Save` when done
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/daedca2e-0620-4b32-a1a1-15777b0be394">
+<img width="800" alt="isolated" src="">
 
 ***
 
@@ -260,7 +254,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 - If everything is setup correctly so far then you should have a successful ping from Client-1 to DC-1.
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/a5df7280-47a1-42a6-bc1d-4fb45c6ed47b">
+<img width="800" alt="isolated" src="">
 
 ***
 
@@ -270,7 +264,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
   - If the DNS server on Client-1 is not set to DC-1's private IP (e.g., it shows 168.63.129.16), update the DNS settings manually to DC-1's private IP. Restarting Client-1's VM may also help apply the changes. If successful, the client may log you out, indicating it's trying to connect to the domain.
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d1c6ac2c-a8bb-4e53-a70e-26d6704a4853">
+<img width="800" alt="isolated" src="">
 
 ***
 
