@@ -424,7 +424,35 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 ### 11. ) Join Client-1 to Domain Controller
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4ab8f941-bd49-409f-8c41-f0e24cc75cac">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bc252291-dddd-4b1f-a079-433458fef2f9">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/1dbde806-3d7b-4848-9e09-a8b8c648b284">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6e459538-9285-4016-8026-a3510456a931">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d2d79b1f-1cbb-4340-a5a1-de3e73524f98">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/eadeed84-5714-431a-b95d-8e8cb841cf57">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/614eb7b1-1cad-441a-8e16-65f15b690e7f">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6bbc2ad2-a1a6-45ef-952f-1a19405cab2b">
 
 ***
 
