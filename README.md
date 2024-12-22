@@ -125,7 +125,7 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
   - Resource Group > DC-1 > Network Settings > `Network Interface` (dc-1139_z1) > `ipconfig1`
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/fd418504-f33c-4938-b41d-52e5326486b7">
 
 ***
 
@@ -137,36 +137,29 @@ First, create a resource group to host the virtual machines: DC-1 (Domain Contro
 
   - Click: `Save`
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c017c1de-e443-4abe-963b-ede58dceb837">
 
 ***
 
-### 3. ) Log into DC-1 VM and Disable the Windows Firewall (for testing connectivity)
+### 3. ) Log into DC-1 VM and Enable ICMPv4 (for testing connectivity)
 
 Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready to test the connectivity from Client-1 to DC-1 by pinging DC-1 from the Client-1 VM.
 
-- 
+<ins>Once inside DC-1</ins>:
 
-<img width="800" alt="isolated" src="">
-<img width="800" alt="isolated" src="">
+- Search: `wf.msc` (Windows Firewall - Microsoft)
 
-### 3.A ) Log into DC-1 VM and Disable the Windows Firewall (for testing connectivity)
-
-- Once inside DC-1 search: `wf.msc` (Windows Firewall - Microsoft)
-
-- 
-
-- 
-
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/aad49eba-fdb0-4671-bfae-8d28a4b7bb95">
 
 ***
 
-<img width="800" alt="isolated" src="">
+### 3.A ) Log into DC-1 and Enable ICMPv4 (for testing connectivity)
 
-***
+- Enable: `Both ICMPv4 Inbound Rules` (There are <ins>two</ins> you need to enable)
 
-<img width="800" alt="isolated" src="">
+  - *They should have two green check marks next to them when you enable them just like the others.*
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3b0ec287-a457-4508-a08c-fb6c0c3b1c39">
 
 ***
 
@@ -204,7 +197,7 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
    
     - *This part is crucial. If your Client-1 VM and Domain Controller are not on the same VNET and Subnet they will be unable to communicate, preventing domain-related operations like joining the domain or authenticating.*
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f82234bf-8e9f-4565-9a96-56ea50a27aa2">
 
 ***
 
@@ -212,19 +205,15 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, which will allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).
 
-<ins>Follow this path to achieve this step</ins>:
+- Go To: Resource Group > Client-1 > Network Settings > `Network Interface (client-160_z1)` > `DNS servers`
 
-- Resource Group > Client-1 > Network Settings > `Network Interface (client-160_z1)` > `DNS servers`
-
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2be62c15-ec58-4afe-8579-2e0bd3929243">
 
 ***
 
 ### 5.A ) Set Client-1’s DNS settings to DC-1’s Private IP address
 
-<ins>Follow this path to achieve this step</ins>:
-
-- Resource Group > Client-1 > Network Settings > Network Interface (client-160_z1) > `DNS servers`
+- Go To: Resource Group > Client-1 > Network Settings > Network Interface (client-160_z1) > `DNS servers`
 
 - Select: `Custom`
 
@@ -232,7 +221,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 - Click: `Save` when done
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c0e0d75a-6a25-4fd1-9c76-d50539b68c97">
 
 ***
 
@@ -246,7 +235,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
    - *If you do not restart your Client-1 VM after setting it's DNS Server to DC-1’s Private IP address then it will not successfully allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).*
 
-<img width="800" alt="isolated" src="forgot to put image">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/b5c26b71-a822-46b3-a7ca-7fe04ead9877">
 
 ***
 
@@ -254,17 +243,17 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 - If everything is setup correctly so far then you should have a successful ping from Client-1 to DC-1.
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2bfa98e9-d1db-4e19-a9f3-3d23b5701ee6">
 
 ***
 
 ### 7. ) From Client-1 VM Open PowerShell and Run: ipconfig /all
 
-- The output for the DNS settings under `DNS Server` should show DC-1’s Private IP Address as shown in the image below.
+- The `DNS Server` should show DC-1’s Private IP Address as shown in the image below.
 
   - If the DNS server on Client-1 is not set to DC-1's private IP (e.g., it shows 168.63.129.16), update the DNS settings manually to DC-1's private IP. Restarting Client-1's VM may also help apply the changes. If successful, the client may log you out, indicating it's trying to connect to the domain.
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/da8e2d18-ec3e-4cef-b395-88e9d6cfe263">
 
 ***
 
