@@ -760,7 +760,7 @@ Log back into Client-1 as: mydomain.com\jane_admin
 
 <ins>In the top right corner of PowerShell ISE</ins>:
 
-Click: `Script` drop down arrow
+Click: the `Script` drop down arrow
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4609810b-6178-45ba-8552-9eaadc3eafe5">
 
@@ -768,9 +768,9 @@ Click: `Script` drop down arrow
 <br>
 <br>
 
-<ins>Wiithin PowerShell ISE</ins:
+<ins>Wiithin PowerShell ISE</ins>:
 
-Create a new File and Paste the Script into it:
+Paste the script below into it:
 
 
 
@@ -804,7 +804,7 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 <br>
 <br>
 
-<ins>Once logged in</ins:
+<ins>Once logged in</ins>:
 
 - Go To: `Command Prompt`
 
