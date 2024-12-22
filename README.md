@@ -772,7 +772,7 @@ Click: the `Script` drop down arrow
 
 Paste the script below into it:
 
-https://github.com/vincentchachere/Generate-Names-Create-Users/blob/main/.gitignore
+https://github.com/vincentchachere/Generate-Names-Create-Users/blob/main/AD
 
 - Run the script and observe the accounts being created
 
