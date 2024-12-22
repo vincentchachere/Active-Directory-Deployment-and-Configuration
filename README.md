@@ -662,21 +662,17 @@ Select: `OK`
 <br>
 <br>
 
-Log back into DC-1 as:
+<ins>Log back into DC-1 as</ins>:
 
 - Username: mydomain.com\jane_admin (Domain User Name)
 
+</ins>Create another Organizational Unit called CLIENTS</ins>:
 
+- Name: `_CLIENTS`
+
+*This part is for organizational purposes*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
-
-<br>
-<br>
-<br>
-
-
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/94dc4c1b-eba9-4594-9429-bb83859bc9a8">
 
 <br>
 <br>
@@ -691,6 +687,14 @@ Log back into DC-1 as:
 - Select: `_CLIENTS`
 
 - Click: `OK`
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/94dc4c1b-eba9-4594-9429-bb83859bc9a8">
+
+<br>
+<br>
+<br>
+
+Click: `_CLIENTS` and you will see Client-1 inside there
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
 
