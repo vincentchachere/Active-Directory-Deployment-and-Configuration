@@ -424,15 +424,7 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 ### 11. ) Join Client-1 to Domain Controller
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4ab8f941-bd49-409f-8c41-f0e24cc75cac">
-
-***
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bc252291-dddd-4b1f-a079-433458fef2f9">
-
-***
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/1dbde806-3d7b-4848-9e09-a8b8c648b284">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9cc81c81-20c3-417f-8f4a-9231cb209170">
 
 ***
 
@@ -469,6 +461,26 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 ***
 
 ### 12. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
+
+<img width="800" alt="isolated" src="">
+
+***
 
 <img width="800" alt="isolated" src="">
 
