@@ -462,33 +462,49 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 ### 12. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/0e2f3ecd-a2ed-4441-ac67-47a135955174">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/de0fa8ee-0fc9-46a3-9338-ac1611dd47c8">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/45f64722-e8f2-4651-93d3-be3d2a5beae2">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/aeb4af69-5f1a-4f52-a754-6c7b9dd7f4ba">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4609810b-6178-45ba-8552-9eaadc3eafe5">
 
 ***
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/fe12756e-cb6f-4716-874e-5608f473b1bd">
 
 ***
 
 ### 13. ) Attempt to log into Client-1 with one of the Created Users
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/ecff73ad-7aa5-489f-a36c-f539dc699328">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2a0a8d88-09f1-43d6-8be6-69b43dc97a16">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/63b0c4aa-986d-42cc-888e-9fe67fd1a9b0">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bbb2ff68-8c58-4936-a0ff-503cb2584124">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/19c207bd-c074-4492-a880-a1c43276c21c">
 
 ***
 
