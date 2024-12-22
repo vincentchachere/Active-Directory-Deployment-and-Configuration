@@ -326,51 +326,77 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ### 9. ) Promote as a DC: Setup a new forest as mydomain.com
 
-- *This can be anything, just remember what it is.*
+<ins>Towards the top-right corner of the Server Manager window, there will be a flag and a yellow triangle ⚠️ symbol</ins>.
+
+- Click: `Flag with Triangle`
+
+- Click: `Promote this server to a domain controller`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/377ca48e-b056-46a5-8504-9afa07a31297">
 
-***
+<br>
+<br>
+<br>
+
+<ins>Within the Deployment Configuration tab</ins>
+
+- Select: `Add a new forest`
+
+- Root domain name: `mydomain.com`
+
+- Click: `Next`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/47cd8d56-987c-4a4e-b2b8-4f586e2f85e8">
 
-***
+<br>
+<br>
+<br>
+
+<ins>Within the Domain Controller Options tab</ins>:
+
+- Give it a DSRM password (*required but it will not be used in this tutorial*).
+
+- Click: `Next`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/fedd52a0-48d0-4c63-8adb-0c824671e1ae">
 
-***
+<br>
+<br>
+<br>
+
+<ins>Within the DNS Options tab</ins>:
+
+- Uncheck: `Create DNS delegation`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/35e80bf5-5348-4c1e-94c9-68cfe5f88de2">
 
-***
+<br>
+<br>
+<br>
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6c03ba31-2e37-415a-bbd4-c993302a9e26">
+<ins>Click Next until you reach the Prerequisites Check tab then</ins>:
 
-***
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/49bf91db-dd67-4e24-b1b3-09d8a6248db2">
-
-***
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/572f8848-94bd-49e9-9a33-692792af4d9f">
-
-***
+- Click: `Install`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8d940c8e-4b2a-49be-a7af-3c8ad8a840f3">
 
-***
+<br>
+<br>
+<br>
 
-- The DC-1 will now restart to complete its promotion to a Domain Controller.
+<ins>The DC-1 will now restart to complete its promotion to a Domain Controller</ins>.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/126fa108-df23-44f3-87ef-b1f58cfe7aea">
 
-***
+<br>
+<br>
+<br>
 
 Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.
 
 - For this lab you can log back into DC-1 as:
 
-  - Username: `mydomain.com\labuser`
+  - Username: `mydomain.com\labuser` (or whatever you made when creating your DC-1 VM)
 
   - Password: `TheSamePasswordYou'veBeenUsing`
 
