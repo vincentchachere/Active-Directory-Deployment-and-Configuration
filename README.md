@@ -270,7 +270,49 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ### 8. ) Install Active Directory
 
-<img width="800" alt="isolated" src="">
+- 
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4109a1e0-694c-4404-9109-4c69f23ca2ce">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/85ca4bd4-5d7c-4a6f-9ca9-86978c1d28e0">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c648e2d9-22be-4883-b616-c8cf565db6b2">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/5283da74-7786-4701-b918-99468b7e41e1">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/612caea1-964c-4197-892d-fd3aa833c562">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3fa6a381-f5b0-4c94-bb48-794bea14b10b">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/b972ffcf-6743-421c-b388-a01cdd8886a9">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9e761f2e-d679-4dee-88e1-a076e1e9fc2d">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/81812bf1-e8b9-48f7-9507-fa4074af53c4">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bf883413-5cb6-4e47-84af-675b97d0a098">
+
+***
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/7c73b736-cf0e-4545-a6d9-683b9ecf90ea">
 
 ***
 
