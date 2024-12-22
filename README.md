@@ -356,6 +356,8 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ### 10. ) Join Client-1 to Domain Controller
 
+Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.
+
 <img width="800" alt="isolated" src="">
 
 ***
