@@ -224,6 +224,8 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 <br>
 <br>
 
+<ins>Setting DC-1’s Private IP address to be static</ins>:
+
 - Go To: Resource Group > Client-1 > Network Settings > Network Interface (client-160_z1) > `DNS servers`
 
 - Select: `Custom`
@@ -420,29 +422,41 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8489277b-b15e-4ebc-947d-11c5a1988046">
 
-***
+<br>
+<br>
+<br>
 
 ### 10. ) Create a Domain Admin User within the Domain D-1 VM
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/190b5ddf-a472-4fc6-8195-819cab80ada6">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/eb3f4120-b273-4901-b111-75081f98ea10">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/20ee7889-bf7a-4925-8d71-23711ed14f00">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bb799a7b-360b-455b-a480-f1b35549135f">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/911fdd20-3880-4ac9-92dc-d59cb5c2a4d6">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/886a3780-b19c-4802-be42-453199b288d0">
 
@@ -450,112 +464,164 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/dcb94011-6685-4c85-b501-7a0834d0b1d1">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d4b8977b-e96e-4da4-b683-4a8115ea2fb7">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/082a8038-dd74-407b-99f1-ba4c43210405">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c3fd5780-1fba-4847-9f73-89502b69ac53">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/06db3f2f-a19e-4baf-adc4-22aa750bef4a">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3c0508eb-56f6-4de5-9938-89324722b547">
 
-***
+<br>
+<br>
+<br>
 
 ### 11. ) Join Client-1 to Domain Controller
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9cc81c81-20c3-417f-8f4a-9231cb209170">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6e459538-9285-4016-8026-a3510456a931">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d2d79b1f-1cbb-4340-a5a1-de3e73524f98">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/eadeed84-5714-431a-b95d-8e8cb841cf57">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/614eb7b1-1cad-441a-8e16-65f15b690e7f">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6bbc2ad2-a1a6-45ef-952f-1a19405cab2b">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/94dc4c1b-eba9-4594-9429-bb83859bc9a8">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
 
-***
+<br>
+<br>
+<br>
 
 ### 12. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/0e2f3ecd-a2ed-4441-ac67-47a135955174">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/de0fa8ee-0fc9-46a3-9338-ac1611dd47c8">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/45f64722-e8f2-4651-93d3-be3d2a5beae2">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/aeb4af69-5f1a-4f52-a754-6c7b9dd7f4ba">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4609810b-6178-45ba-8552-9eaadc3eafe5">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/fe12756e-cb6f-4716-874e-5608f473b1bd">
 
-***
+<br>
+<br>
+<br>
 
 ### 13. ) Attempt to log into Client-1 with one of the Created Users
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/ecff73ad-7aa5-489f-a36c-f539dc699328">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2a0a8d88-09f1-43d6-8be6-69b43dc97a16">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/63b0c4aa-986d-42cc-888e-9fe67fd1a9b0">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bbb2ff68-8c58-4936-a0ff-503cb2584124">
 
-***
+<br>
+<br>
+<br>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/19c207bd-c074-4492-a880-a1c43276c21c">
 
-***
+<br>
+<br>
+<br>
 
 </details>
