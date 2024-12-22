@@ -574,7 +574,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-Now you can log out / close the connection to DC-1 and:
+<ins>Now you can log out / close the connection to DC-1 and</ins>:
 
 - Log back into DC-1 as: `mydomain.com\jane_admin` (the first name of your domain user then underscore admin with mydomain.com attached to the front)
 
@@ -586,11 +586,25 @@ Now you can log out / close the connection to DC-1 and:
 
 ### 11. ) Join Client-1 to Domain Controller
 
+Log into Client-1 as the original local admin (labuser) and join it to the domain.
+
+*The Client-1 VM will restart hen it joins the domain.*
+
+- Right-Click: `Start`
+
+- Select: `System`
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9cc81c81-20c3-417f-8f4a-9231cb209170">
 
 <br>
 <br>
 <br>
+
+<ins>Within System Settings</ins>:
+
+- Select: `Rename this PC (advanced)`
+
+- Select: `Change`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6e459538-9285-4016-8026-a3510456a931">
 
@@ -598,11 +612,29 @@ Now you can log out / close the connection to DC-1 and:
 <br>
 <br>
 
+*Notice Computer Name is Client-1 not DC-1*
+
+- Select: `Domain`
+
+- Type In: `mydomain.com`
+
+- Click: `OK`
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d2d79b1f-1cbb-4340-a5a1-de3e73524f98">
 
 <br>
 <br>
 <br>
+
+When the Windows Security Window Pops Up:
+
+- Type In: mydomain.com\*DomainUserName*
+
+- Password: `WhateverYouCreated`
+
+- Select: `OK`
+
+*Client-1 VM will restart after this*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/eadeed84-5714-431a-b95d-8e8cb841cf57">
 
@@ -610,11 +642,19 @@ Now you can log out / close the connection to DC-1 and:
 <br>
 <br>
 
+<ins>When this popos up</ins>:
+
+Select: `OK`
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/614eb7b1-1cad-441a-8e16-65f15b690e7f">
 
 <br>
 <br>
 <br>
+
+<ins>When this popos up</ins>:
+
+- Select: `Restart Now`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6bbc2ad2-a1a6-45ef-952f-1a19405cab2b">
 
@@ -622,17 +662,35 @@ Now you can log out / close the connection to DC-1 and:
 <br>
 <br>
 
+Log back into DC-1 as:
+
+- Username: mydomain.com\jane_admin (Domain User Name)
+
+
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
 
 <br>
 <br>
 <br>
 
+
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/94dc4c1b-eba9-4594-9429-bb83859bc9a8">
 
 <br>
 <br>
 <br>
+
+<ins>Within Active Directory Users and Computers</ins>:
+
+- Click: `Computers`
+
+- Right-Click: `Client-1`
+
+- Select: `_CLIENTS`
+
+- Click: `OK`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
 
