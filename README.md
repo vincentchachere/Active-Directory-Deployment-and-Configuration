@@ -186,7 +186,7 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
 
 - Go To: `Networking` Tab
 
-<img width="800" alt="isolated" src="">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d68b9dde-7cf9-4c3b-9a3b-54b07117a782">
 
 ***
 
@@ -198,7 +198,7 @@ Now you can Remote Desktop (RDP) into DC-1 and Enable ICMPv4 so we can be ready 
    
     - *This part is crucial. If your Client-1 VM and Domain Controller are not on the same VNET and Subnet they will be unable to communicate, preventing domain-related operations like joining the domain or authenticating.*
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f82234bf-8e9f-4565-9a96-56ea50a27aa2">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f60620f6-dfdf-4c06-8cc4-58bc7cdfa909">
 
 ***
 
