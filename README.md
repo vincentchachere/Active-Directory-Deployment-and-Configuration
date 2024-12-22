@@ -350,6 +350,10 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ***
 
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/126fa108-df23-44f3-87ef-b1f58cfe7aea">
+
+***
+
 ### 10. ) Join Client-1 to Domain Controller
 
 <img width="800" alt="isolated" src="">
