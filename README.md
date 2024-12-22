@@ -312,6 +312,18 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ***
 
+Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.
+
+- The DC-1 will now restart to complete its promotion to a Domain Controller.
+
+- Once that's finished log back into DC-1 as:
+
+  - Username: `mydomain.com\labuser`
+
+  - Password: `TheSamePasswordYou'veBeenUsing`
+
+- *Make sure to use a backslash ( \ ) NOT a forward slash ( / ) or you will not be able to login.*
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/7c73b736-cf0e-4545-a6d9-683b9ecf90ea">
 
 ***
@@ -395,14 +407,6 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 ***
 
 ### 11. ) Join Client-1 to Domain Controller
-
-Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.
-
-- *Make sure to use a backslash ( \ ) NOT a forward slash ( / ) or you will not be able to login.*
-
-- Username: `mydomain.com\labuser`
-
-- Password: `WhatYouPutWhenCreatingYourDC-1VM`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8489277b-b15e-4ebc-947d-11c5a1988046">
 
