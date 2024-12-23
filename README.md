@@ -597,7 +597,7 @@ Select: `OK`
 <br>
 <br>
 
-<ins>In the Search Bar</ins>:
+<ins>Log back into the Domain Controller (DC-1) as</ins>: mydomain.com\jane_admin
 
 - Search: `Powershell ISE`
 
@@ -605,7 +605,7 @@ Select: `OK`
 
 - Select: `Run as Administrator`
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/aeb4af69-5f1a-4f52-a754-6c7b9dd7f4ba">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/5066bc80-075f-44cb-b81d-e999f764a6ef">
 
 <br>
 <br>
@@ -669,7 +669,7 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 
 <ins>Once inside Command Prompt</ins>:
 
-Notice the created user's name displayed in the path.
+*Notice the created user's name displayed in the path.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bbb2ff68-8c58-4936-a0ff-503cb2584124">
 
@@ -681,7 +681,7 @@ Notice the created user's name displayed in the path.
 
 - Go to: `This PC` > `Windows (C:)` > `Users`
 
-Take notice that the created user's name is shown in here because you logged into the Client VM with that account.
+*Take notice that the created user's name is shown in here because you logged into the Client VM with that account.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/19c207bd-c074-4492-a880-a1c43276c21c">
 
