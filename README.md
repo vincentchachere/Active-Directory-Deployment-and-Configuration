@@ -63,228 +63,9 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 <summary>
 
-## ⚙️ Part 1: Building Active Directory Infrastructure
+### 1. ) Install Active Directory
 
 </summary>
-
-### 1. ) Create Domain Controller (DC-1)
-
-First, create a resource group to host the virtual machines: DC-1 (Domain Controller) and Client-1.
-
-<ins>Here are the following configurations</ins>:
-
-  - Resource Group: `Active-Directory-Lab`
-
-  - Virtual Machine Name: `DC-1`
-
-  - Region: `East US`
-
-  - Image: `Windows Server 2022 Datacenter: Azure Edition - x64 Gen2`
-    - *Make sure to choose the correct VM image, or setting up the Domain Controller may fail.*
-   
-  - Size: `Standard_D2s_v3 - 2 vcpus, 8 GiB memory ($137.24/month)`
-
-  - Username: `labuser` (or whatever you want - just remember it)
-
-  - Password: `SomethingYouCanRemember`
-
-  - Check: `The Two Licensing Boxes` at the bottom
-
-  - Go To: `Networking` Tab for Step 1.A so that you can create your Virtual Network and Subnet
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/de53543c-2bef-488e-8f95-a10422ed15ce">
-
-<br>
-<br>
-<br>
-
-<ins>Within your Network tab</ins>:
-
-  - Virtual Network: `Active-Directory-Vnet`
-
-  - *The Subnet will create itself*
-
-  - Click: `Review + Create`
-
-    Then..
-
-  - Click:  `Create`
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/0eccc2b2-0b13-4351-8315-b84b42e26d1a">
-
-<br>
-<br>
-<br>
-
-### 2. ) Set Domain Controller's (DC-1) NIC Private IP Address to be Static
-
-- Go To: `DC-1's NIC Private IP Address`
-
-  - Resource Group > DC-1 > Network Settings > `Network Interface` (dc-1139_z1) > `ipconfig1`
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/fd418504-f33c-4938-b41d-52e5326486b7">
-
-<br>
-<br>
-<br>
-
-<ins>Setting DC-1’s Private IP address to be static</ins>:
-
-- Resource Group > DC-1 > Network Settings > `Network Interface` (dc-1139_z1) > `ipconfig1`
-
-  - Select: `Static`
-
-  - Click: `Save`
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c017c1de-e443-4abe-963b-ede58dceb837">
-
-<br>
-<br>
-<br>
-
-### 3. ) Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
-
-Now you can Remote Desktop (RDP) into DC-1 and enable the two ICMPv4 inbound rules to prepare for ping testing from Client-1 to DC-1.
-
-<ins>Once inside DC-1</ins>:
-
-- Search: `wf.msc` (Windows Firewall - Microsoft)
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/aad49eba-fdb0-4671-bfae-8d28a4b7bb95">
-
-<br>
-<br>
-<br>
-
-<ins>Enabling the Two ICMPv4 Inbound Rules</ins>:
-
-*Look for the rules with Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)*
-
-- Enable: `Both ICMPv4 Inbound Rules` (There are <ins>two</ins> you need to enable)
-
-*They should have two green check marks next to them when you enable them just like the others.*
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3b0ec287-a457-4508-a08c-fb6c0c3b1c39">
-
-<br>
-<br>
-<br>
-
-### 4. ) Create Client-1 VM
-
-<ins>So similar to creating your domain controller, here are your Client-1 Configurations</ins>:
-
-- Resource Group: `Active-Directory-Lab` (Same as your Domain Controller: DC-1)
-
-- Virtual Machine Name: `Client-1`
-
-- Region: `East US` (Same as your Domain Controller: DC-1)
-
-- Image: `Windows 10 Pro, version 22H2 - x64 Gen2`
-
-- Size: `Standard_D2s_v3 - 2 vcpus, 8 GiB memory ($70.08/month)` (Same as your Domain Controller: DC-1)
-
-- Username: `Use the same one you used for you Domain Controller` for simplicity sake
-
-- Password: `Use the same one you used for you Domain Controller` for simplicity sake
-
-- Check: `The Licensing Boxe` at the bottom
-
-- Go To: `Networking` Tab
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d68b9dde-7cf9-4c3b-9a3b-54b07117a782">
-
-<br>
-<br>
-<br>
-
-<ins>Within your Network Tab</ins>:
-
-- Choose the `Same Virtual Network and Subnet` as your Domain Controller
-
-*This part is crucial. If your Client-1 VM and Domain Controller are not on the same VNET and Subnet they will be unable to communicate, preventing domain-related operations like joining the domain or authenticating.*
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f60620f6-dfdf-4c06-8cc4-58bc7cdfa909">
-
-<br>
-<br>
-<br>
-
-### 5. ) Set Client-1’s DNS settings to DC-1’s Private IP address
-
-So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, which will allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).
-
-- Go To: Resource Group > Client-1 > Network Settings > `Network Interface (client-160_z1)` > `DNS servers`
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2be62c15-ec58-4afe-8579-2e0bd3929243">
-
-<br>
-<br>
-<br>
-
-<ins>Setting Client's DNS servers to DC-1's Private IP Address</ins>:
-
-- Go To: Resource Group > Client-1 > Network Settings > Network Interface (client-160_z1) > `DNS servers`
-
-- Select: `Custom`
-
-- Input: `DC-1's Private IP Address` (Example; mine is: 10.0.0.4)
-
-- Click: `Save` when done
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c0e0d75a-6a25-4fd1-9c76-d50539b68c97">
-
-<br>
-<br>
-<br>
-
-<ins>Now for the DNS Settings to sync in you must restart you Client-1's VM so</ins>:
-
-- Go To: `Resource Group` > `Client-1`
-
-- Restart: `Client-1` VM when done doing this
-
-*If you do not restart your Client-1 VM after setting it's DNS Server to DC-1’s Private IP address then it will not successfully allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).*
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/b5c26b71-a822-46b3-a7ca-7fe04ead9877">
-
-<br>
-<br>
-<br>
-
-### 6. ) Attempt to Ping DC-1’s Private IP address from Client-1 VM
-
-<ins>If the setup has been configured correctly, you should see a successful ping from Client-1 to DC-1.</ins>
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2bfa98e9-d1db-4e19-a9f3-3d23b5701ee6">
-
-<br>
-<br>
-<br>
-
-### 7. ) From Client-1 VM Open PowerShell and Run: ipconfig /all
-
-- The `DNS Server` should show DC-1’s Private IP Address as shown in the image below.
-
-*If the DNS server on Client-1 is not set to DC-1's private IP (e.g., it shows 168.63.129.16), update the DNS settings manually to DC-1's private IP. Restarting Client-1's VM may also help apply the changes. If successful, the client may log you out, indicating it's trying to connect to the domain.*
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8641ddec-9a6c-4919-b3d6-cbd0f6bec77e">
-
-<br>
-<br>
-<br>
-
-</details>
-
-<details>
-
-<summary>
-
-## ⚙️ Part 2: Deploying Active Directory and User Creation
-
-</summary>
-
-### 8. ) Install Active Directory
 
 <ins>Go to the Domain Controller (DC-1) and in Server Manager Dashboard</ins>:
 
@@ -336,11 +117,17 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/7c73b736-cf0e-4545-a6d9-683b9ecf90ea">
 
-<br>
-<br>
+</details>
+
 <br>
 
-### 9. ) Promote as a DC: Setup a new forest as mydomain.com
+<details>
+
+<summary>
+
+### 2. ) Promote DC-1 to Domain Controller
+
+</summary>
 
 <ins>Towards the top-right corner of the Server Manager window, there will be a flag and a yellow triangle ⚠️ symbol</ins>.
 
@@ -370,7 +157,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 <ins>Within the Domain Controller Options tab</ins>:
 
-- Give it a DSRM password (*required but it will not be used in this tutorial*).
+- Give it a DSRM password (*This is required but it will not be used in this tutorial*).
 
 - Click: `Next`
 
@@ -420,13 +207,19 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8489277b-b15e-4ebc-947d-11c5a1988046">
 
-<br>
-<br>
+</details>
+
 <br>
 
-### 10. ) Create a Domain Admin User within the Domain D-1 VM
+<details>
 
-Now you can log back into DC-1 as domain.com\labuser, create two organizational units called _EMPLOYEES and _ADMINS, then add a new domain admin user. Mine will be named Jane Doe (You can name yours the same or something different, just remember it).
+<summary>
+
+### 3. ) Create a Domain Admin User within the Domain D-1 VM
+
+</summary>
+
+Now that you're logged back into DC-1 as local user: domain.com\labuser, create two organizational units called _EMPLOYEES and _ADMINS, then add a new domain admin user. Mine will be named Jane Doe (You can name yours the same or something different, just remember it).
 
 - Go To: `Active Directory Users and Computers` (ADUC)
 
@@ -486,7 +279,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 
 - Click: `Next`
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/911fdd20-3880-4ac9-92dc-d59cb5c2a4d6">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/29c7bceb-57a0-48d9-9763-6776b87e65a5">
 
 <br>
 <br>
@@ -500,7 +293,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 
 - Click: `Next`
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/886a3780-b19c-4802-be42-453199b288d0">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f22c31e6-776a-4ad0-8c55-5a9185b45e4b">
 
 <br>
 <br>
@@ -556,7 +349,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Bak in Jane Doe Properties</ins>:
+<ins>Back in Jane Doe Properties</ins>:
 
 - Click: `Apply`
 
@@ -574,11 +367,69 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3c0508eb-56f6-4de5-9938-89324722b547">
 
+</details>
+
+<br>
+
+<details>
+
+<summary>
+
+### 4. ) Join Client-1 to Domain Controller
+
+</summary>
+
+To join Client-1 to the Domain Controller we will first set Client-1’s DNS servers settings to DC-1’s Private IP address, which will allow the client-1 VM to resolve domain-related DNS queries through the Domain Dontroller (DC-1).
+
+- Go To: Resource Group > Client-1 > Network Settings > `Network Interface (client-160_z1)` > `DNS servers`
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2be62c15-ec58-4afe-8579-2e0bd3929243">
+
 <br>
 <br>
 <br>
 
-### 11. ) Join Client-1 to Domain Controller
+<ins>Setting Client's DNS servers to DC-1's Private IP Address</ins>:
+
+- Go To: Resource Group > Client-1 > Network Settings > Network Interface (client-160_z1) > `DNS servers`
+
+- Select: `Custom`
+
+- Input: `DC-1's Private IP Address` (Example; mine is: 10.0.0.4)
+
+- Click: `Save` when done
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c0e0d75a-6a25-4fd1-9c76-d50539b68c97">
+
+<br>
+<br>
+<br>
+
+<ins>Now for the DNS Settings to sync in you must restart you Client-1's VM so</ins>:
+
+- Go To: `Resource Group` > `Client-1`
+
+- Restart: `Client-1` VM when done doing this
+
+*If you do not restart your Client-1 VM after setting it's DNS Server to DC-1’s Private IP address then it will not successfully allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).*
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/b5c26b71-a822-46b3-a7ca-7fe04ead9877">
+
+<br>
+<br>
+<br>
+
+<ins>From Client-1 VM Open PowerShell and Ping DC-1 then Run: ipconfig /all</ins>:
+
+- The `DNS Server` should show DC-1’s Private IP Address as shown in the image below.
+
+*If the DNS server on Client-1 is not set to DC-1's private IP (e.g., it shows 168.63.129.16), update the DNS settings manually to DC-1's private IP. Restarting Client-1's VM may also help apply the changes. If successful, the client may log you out, indicating it's trying to connect to the domain.*
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8641ddec-9a6c-4919-b3d6-cbd0f6bec77e">
+
+<br>
+<br>
+<br>
 
 Log into Client-1 as the original local admin (labuser) and join it to the domain.
 
@@ -622,7 +473,7 @@ Log into Client-1 as the original local admin (labuser) and join it to the domai
 
 When the Windows Security Window Pops Up:
 
-- Type In: mydomain.com\*DomainUserName*
+- Type In: mydomain.com\*YourDomainUserName*
 
 - Password: `WhateverYouCreated`
 
@@ -636,7 +487,7 @@ When the Windows Security Window Pops Up:
 <br>
 <br>
 
-<ins>When this popos up</ins>:
+<ins>When this pops up</ins>:
 
 Select: `OK`
 
@@ -646,14 +497,14 @@ Select: `OK`
 <br>
 <br>
 
-<ins>When this popos up</ins>:
+<ins>When this pops up</ins>:
 
 - Select: `Restart Now`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6bbc2ad2-a1a6-45ef-952f-1a19405cab2b">
 
-<br>
-<br>
+</details>
+
 <br>
 
 <ins>Log back into DC-1 as</ins>:
@@ -829,8 +680,6 @@ Take notice that the created user's name is shown in here because you logged int
 <br>
 <br>
 <br>
-
-</details>
 
 ## Final Thoughts
 
