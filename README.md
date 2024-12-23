@@ -373,7 +373,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 
 - Name: `_CLIENTS`
 
-*This part is for organizational purposes*
+*We will place Client-1 inside this folder for organizational purposes.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
 
@@ -419,7 +419,9 @@ Click: `_CLIENTS` and you will see Client-1 inside there
 
 To join Client-1 to the Domain Controller we will first set Client-1’s DNS servers settings to DC-1’s Private IP address, which will allow the client-1 VM to resolve domain-related DNS queries through the Domain Dontroller (DC-1).
 
-- Go To: Resource Group > Client-1 > Network Settings > `Network Interface (client-160_z1)` > `DNS servers`
+<ins>Go To</ins>:
+
+- Resource Group: `Active-Directory-Lab` > VM: `Client-1` > `Network Settings` > Network Interface: `client-1408_z1` > `DNS servers`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2be62c15-ec58-4afe-8579-2e0bd3929243">
 
@@ -427,9 +429,9 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>Setting Client's DNS servers to DC-1's Private IP Address</ins>:
+<ins>Setting Client's DNS servers to DC-1's Private IP Address Go To</ins>:
 
-- Go To: Resource Group > Client-1 > Network Settings > Network Interface (client-160_z1) > `DNS servers`
+- Resource Group: `Active-Directory-Lab` > VM: `Client-1` > `Network Settings` > Network Interface: `client-1408_z1` > `DNS servers`
 
 - Select: `Custom`
 
@@ -445,7 +447,7 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 
 <ins>Now for the DNS Settings to sync in you must restart you Client-1's VM so</ins>:
 
-- Go To: `Resource Group` > `Client-1`
+- Resource Group: `Active-Directory-Lab` > VM: `Client-1`
 
 - Restart: `Client-1` VM when done doing this
 
@@ -457,7 +459,11 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>From Client-1 VM Open PowerShell and Ping DC-1 then Run: ipconfig /all</ins>:
+<ins>Log into Client-1 as the original local admin (labuser) and</ins>:
+
+- Open: `PowerShell`
+
+- Run: `ipconfig /all`
 
 - The `DNS Server` should show DC-1’s Private IP Address as shown in the image below.
 
@@ -469,13 +475,13 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-Log into Client-1 as the original local admin (labuser) and join it to the domain.
-
-*The Client-1 VM will restart hen it joins the domain.*
+<ins>While still in Client-1 join it to the domain</ins>:
 
 - Right-Click: `Start`
 
 - Select: `System`
+
+*The Client-1 VM will restart when it joins the domain.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9cc81c81-20c3-417f-8f4a-9231cb209170">
 
@@ -495,7 +501,7 @@ Log into Client-1 as the original local admin (labuser) and join it to the domai
 <br>
 <br>
 
-*Notice Computer Name is Client-1 not DC-1*
+<ins>Within Computeer Name/Domain Changes</ins>:
 
 - Select: `Domain`
 
@@ -503,15 +509,17 @@ Log into Client-1 as the original local admin (labuser) and join it to the domai
 
 - Click: `OK`
 
+*Notice Computer Name is Client-1 not DC-1*
+
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d2d79b1f-1cbb-4340-a5a1-de3e73524f98">
 
 <br>
 <br>
 <br>
 
-When the Windows Security Window Pops Up:
+<ins>When the Windows Security Window Pops Up</ins>:
 
-- Type In: mydomain.com\*YourDomainUserName*
+- Type In: `mydomain.com\jane_admin`
 
 - Password: `WhateverYouCreated`
 
@@ -551,7 +559,7 @@ Select: `OK`
 
 </summary>
 
-Log back into Client-1 as: mydomain.com\jane_admin
+<ins>Log back into Client-1 as: mydomain.com\jane_admin then</ins>:
 
 - Go To: `System Settings`
 
