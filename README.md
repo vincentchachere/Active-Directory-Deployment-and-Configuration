@@ -547,7 +547,7 @@ Select: `OK`
 
 <summary>
 
-### 12. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
+### 5. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
 
 </summary>
 
