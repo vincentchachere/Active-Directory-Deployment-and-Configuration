@@ -8,7 +8,7 @@
 
 <br>
 
-<h1 align="center">Active Directory Infrastructure Setup, Deployment, and Configuration</h1> 
+<h1 align="center">Active Directory Deployment and Configuration</h1> 
 <br>
 
 <p align="center">
