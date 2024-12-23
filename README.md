@@ -18,13 +18,7 @@
 
 ## Lab Overview
 
-This project is the first in our Azure and Active Directory tutorial series, laying the foundation for the upcoming lessons.
-
-The goal is to create a basic Azure lab environment that simulates an enterprise Active Directory setup. By completing this project, we’ll build the necessary infrastructure to explore Active Directory functionalities in an Azure network, preparing for more advanced topics in future projects.
-
-In the simulated Active Directory environment, we will deploy and configure Active Directory, create user accounts, and log into the client's virtual machine with one of these users to verify proper authentication, credentials, and permissions.
-
-In this "Active Directory Infrastructure Setup, Deployment, and Configuration" project, we’ll cover key aspects like installation, forest creation, user management, domain integration, and custom Remote Desktop access, providing a solid foundation in Active Directory services.
+This lab builds on the previous one [here](https://github.com/vincentchachere/azure-on-prem-ad). It simulates an enterprise Active Directory setup in Azure, where you'll deploy and configure Active Directory, create groups and user accounts, then verify the credentials, authentication, and permissions by logging into a client VM with manually generated users. Key topics include AD installation, forest creation, user management, domain integration, and custom Remote Desktop access, providing a strong foundation for future projects.
 
 ## On-Premises Active Directory Deployed in the Cloud (Azure)
 Active Directory essentially manages user accounts, passwords, permissions, and devices at large scale. This tutorial explains how to implement on-premises Active Directory in Azure Virtual Machines.
