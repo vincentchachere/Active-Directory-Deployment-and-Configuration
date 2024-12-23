@@ -254,7 +254,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 ### 6. ) Attempt to Ping DC-1’s Private IP address from Client-1 VM
 
-If everything is setup correctly so far then you should have a successful ping from Client-1 to DC-1.
+<ins>If the setup has been configured correctly, you should see a successful ping from Client-1 to DC-1.</ins>
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2bfa98e9-d1db-4e19-a9f3-3d23b5701ee6">
 
