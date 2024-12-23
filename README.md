@@ -203,7 +203,7 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 <summary>
 
-### 3. ) Create a Domain Admin User within the Domain D-1 VM
+### 3. ) Create an Admin in Acitive Directory
 
 </summary>
 
@@ -405,7 +405,7 @@ Click: `_CLIENTS` and you will see Client-1 inside there
 
 <summary>
 
-### 4. ) Join Client-1 to Domain Controller
+### 4. ) Join Client-1 to Domain
 
 </summary>
 
@@ -547,7 +547,7 @@ Select: `OK`
 
 <summary>
 
-### 5. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
+### 5. ) Setup Remote Desktop for Non-Administrative Users
 
 </summary>
 
