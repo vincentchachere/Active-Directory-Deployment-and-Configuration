@@ -44,10 +44,10 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 ## High-Level Active Directory Deployment and Configuration Steps
 
 - Install Active Directory
-- Create a Domain Admin User within the Domain D-1 VM
-- Join Client-1 to Domain Controller
-- Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
-- Attempt to log into Client-1 with one of the created users
+- Promote DC-1 to Domain Controller
+- Create an Admin in Acitive Directory
+- Join Client-1 to Domain
+- Setup Remote Desktop for Non-Administrative Users
 
 ## Configuration Steps
 
