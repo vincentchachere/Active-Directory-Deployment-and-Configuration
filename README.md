@@ -119,8 +119,6 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 </details>
 
-<br>
-
 <details>
 
 <summary>
@@ -208,8 +206,6 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8489277b-b15e-4ebc-947d-11c5a1988046">
 
 </details>
-
-<br>
 
 <details>
 
@@ -367,9 +363,51 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3c0508eb-56f6-4de5-9938-89324722b547">
 
-</details>
+<br>
+<br>
+<br>
+
+<ins>Back inside DC-1 as: mydomain.com\jane_admin</ins>:
+
+</ins>Create another Organizational Unit called CLIENTS</ins>:
+
+- Name: `_CLIENTS`
+
+*This part is for organizational purposes*
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
 
 <br>
+<br>
+<br>
+
+<ins>Within Active Directory Users and Computers</ins>:
+
+- Click: `Computers`
+
+- Right-Click: `Client-1`
+
+- Select: `_CLIENTS`
+
+- Click: `OK`
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/94dc4c1b-eba9-4594-9429-bb83859bc9a8">
+
+<br>
+<br>
+<br>
+
+<ins>Within Active Directory Users and Computers</ins>:
+
+Click: `_CLIENTS` and you will see Client-1 inside there
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
+
+<br>
+<br>
+<br>
+
+</details>
 
 <details>
 
@@ -505,51 +543,13 @@ Select: `OK`
 
 </details>
 
-<br>
+<details>
 
-<ins>Log back into DC-1 as</ins>:
-
-- Username: mydomain.com\jane_admin
-
-</ins>Create another Organizational Unit called CLIENTS</ins>:
-
-- Name: `_CLIENTS`
-
-*This part is for organizational purposes*
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
-
-<br>
-<br>
-<br>
-
-<ins>Within Active Directory Users and Computers</ins>:
-
-- Click: `Computers`
-
-- Right-Click: `Client-1`
-
-- Select: `_CLIENTS`
-
-- Click: `OK`
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/94dc4c1b-eba9-4594-9429-bb83859bc9a8">
-
-<br>
-<br>
-<br>
-
-<ins>Within Active Directory Users and Computers</ins>:
-
-Click: `_CLIENTS` and you will see Client-1 inside there
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
-
-<br>
-<br>
-<br>
+<summary>
 
 ### 12. ) Setup Remote Desktop for Non-Administrative Users on CLient-1 VM
+
+</summary>
 
 Log back into Client-1 as: mydomain.com\jane_admin
 
@@ -677,9 +677,7 @@ Take notice that the created user's name is shown in here because you logged int
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/19c207bd-c074-4492-a880-a1c43276c21c">
 
-<br>
-<br>
-<br>
+</details>
 
 ## Final Thoughts
 
