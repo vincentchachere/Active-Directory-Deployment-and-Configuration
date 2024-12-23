@@ -41,7 +41,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 - Windows Server 2022
 - Windows 10 (21H2)
 
-## High-Level Infrastrusture, Deployment, and Configuration Steps
+## High-Level Deployment and Configuration Steps
 
 #### Part 1: Building the Infrastructure
 - Setup Domain Controller (Windows Server 2022) in Azure named "DC-1"
