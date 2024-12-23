@@ -41,16 +41,8 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 - Windows Server 2022
 - Windows 10 (21H2)
 
-## High-Level Deployment and Configuration Steps
+## High-Level Active Directory Deployment and Configuration Steps
 
-#### Part 1: Building the Infrastructure
-- Setup Domain Controller (Windows Server 2022) in Azure named "DC-1"
-- Set Domain Controller's (DC-1's) NIC Private IP address to be static
-- Log into DC-1 VM and Enable Both ICMPv4 Inbound Rules (for testing connectivity)
-- Setup Client-1 VM (Windows 10 (21H2)) in Azure named "Client-1"
-- Attempt to ping DC-1's Private IP Address from Client-1 VM
-
-#### Part 2: Deploying Active Directory and User Creation
 - Install Active Directory
 - Create a Domain Admin User within the Domain D-1 VM
 - Join Client-1 to Domain Controller
