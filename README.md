@@ -268,7 +268,7 @@ So now we will Set Client-1’s DNS settings to DC-1’s Private IP address, whi
 
 *If the DNS server on Client-1 is not set to DC-1's private IP (e.g., it shows 168.63.129.16), update the DNS settings manually to DC-1's private IP. Restarting Client-1's VM may also help apply the changes. If successful, the client may log you out, indicating it's trying to connect to the domain.*
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/da8e2d18-ec3e-4cef-b395-88e9d6cfe263">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8641ddec-9a6c-4919-b3d6-cbd0f6bec77e">
 
 <br>
 <br>
