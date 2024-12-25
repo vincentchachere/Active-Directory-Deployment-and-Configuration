@@ -613,15 +613,15 @@ Click: the `Script` drop down arrow
 <br>
 <br>
 
-<ins>Wiithin PowerShell ISE</ins>:
+<ins>Within PowerShell ISE</ins>:
 
-Paste the script below into it:
+*Copy, Paste, then Run the script below into PowerShell ISE:*
 
 https://github.com/vincentchachere/Generate-Names-Create-Users/blob/main/AD
 
-- Run the script and observe the accounts being created
+*Observe the accounts being created*
 
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/fe12756e-cb6f-4716-874e-5608f473b1bd">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/7eabe6e2-48ab-463c-80ad-0e900b95e504">
 
 <br>
 <br>
