@@ -679,12 +679,10 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 
 </details>
 
-## Final Thoughts
+<h2 align="center">Final Thoughts</h2>
 
 With the Active Directory infrastructure now fully set up, deployed, and configured, we've established a solid foundation for centralized domain management. We covered installing and promoting a Domain Controller, creating users, groups, and organizational units, setting up DNS, and testing connectivity between client machines and the server. This infrastructure enables streamlined management, enhanced security, and scalability for future needs. Always document your setup for reference and maintain regular backups to ensure system reliability.
 
 Thank you for following along with this project. Your time and effort in learning and implementing these concepts are greatly appreciated. I hope this guide was helpful!
-
-***
 
 ☎️ For any questions or just to connect you can reach me at: www.linkedin.com/in/vincentchachere
