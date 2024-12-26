@@ -203,7 +203,7 @@ Now that your DC-1 VM is a domain controller, you need to decide how to log in: 
 
 <summary>
 
-### 3. ) Create an Admin in Acitive Directory
+### 3. ) Create an Admin in Active Directory
 
 </summary>
 
