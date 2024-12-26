@@ -185,7 +185,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 <br>
 <br>
 
-Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.
+<ins>Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.</ins>
 
 - For this lab you can log back into DC-1 as:
 
