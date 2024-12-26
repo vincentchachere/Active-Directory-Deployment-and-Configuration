@@ -355,50 +355,6 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3c0508eb-56f6-4de5-9938-89324722b547">
 
-<br>
-<br>
-<br>
-
-<ins>Back inside DC-1 as: mydomain.com\jane_admin</ins>:
-
-</ins>Create another Organizational Unit called CLIENTS</ins>:
-
-- Name: `_CLIENTS`
-
-*We will place Client-1 inside this folder for organizational purposes.*
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
-
-<br>
-<br>
-<br>
-
-<ins>Within Active Directory Users and Computers</ins>:
-
-- Click: `Computers`
-
-- Right-Click: `Client-1`
-
-- Select: `_CLIENTS`
-
-- Click: `OK`
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/94dc4c1b-eba9-4594-9429-bb83859bc9a8">
-
-<br>
-<br>
-<br>
-
-<ins>Within Active Directory Users and Computers</ins>:
-
-Click: `_CLIENTS` and you will see Client-1 inside there
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
-
-<br>
-<br>
-<br>
-
 </details>
 
 <details>
@@ -540,6 +496,64 @@ Select: `OK`
 - Select: `Restart Now`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6bbc2ad2-a1a6-45ef-952f-1a19405cab2b">
+
+<br>
+<br>
+<br>
+
+<ins>Log back into the Domain Controller and verify Client-1 made it into ADUC</ins>:
+
+- Log into DC-1 as: `mydomain.com\jane_admin`
+
+- Open: `Active Directory Users and Computers (ADUC)`
+
+- Expand: `mydomain.com`
+
+- Select: `Computers`
+
+*If you do not see Client-1 in there **Refresh** ADUC.*
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/a8f3ab63-8819-4bee-952e-a59362c0a329">
+
+<br>
+<br>
+<br>
+
+<ins>Create another Organizational Unit called CLIENTS</ins>:
+
+*We will place Client-1 inside this folder for organizational purposes.*
+
+- Name: `_CLIENTS`
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
+
+<br>
+<br>
+<br>
+
+<ins>Within Active Directory Users and Computers</ins>:
+
+- Click: `Computers`
+
+- Right-Click: `Client-1`
+
+- Select: `Move`
+
+- Select: `_CLIENTS`
+
+- Click: `OK`
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/a1b031ec-9d4d-4fee-b5ad-f524b2b8e4e5">
+
+<br>
+<br>
+<br>
+
+<ins>Within Active Directory Users and Computers</ins>:
+
+Click: `_CLIENTS` and you will see Client-1 inside there
+
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
 
 </details>
 
