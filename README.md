@@ -697,7 +697,7 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 
 With the Active Directory infrastructure now fully set up, deployed, and configured, we've established a solid foundation for centralized domain management. We covered installing and promoting a Domain Controller, creating users, groups, and organizational units, setting up DNS, and testing connectivity between client machines and the server. This infrastructure enables streamlined management, enhanced security, and scalability for future needs. Always document your setup for reference and maintain regular backups to ensure system reliability.
 
-If you'd like to continue building off this lab the next tuorial within this Active Directories Series is [here](https://github.com/vincentchachere/Group-Policy-and-Managing-Accounts/edit/main/README.md). This is where we'll practice account lockout, account recovery, group policy creation, password resets, enabling/disabling accounts, and event log observation.
+If you'd like to continue building off this Active Directory series the [next tuorial is here](https://github.com/vincentchachere/Group-Policy-and-Managing-Accounts/edit/main/README.md). This is where we'll practice account lockout, account recovery, group policy creation, password resets, enabling/disabling accounts, and event log observation.
 
 Thank you for following along with this project. Your time and effort in learning and implementing these concepts are greatly appreciated. 
 
