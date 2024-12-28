@@ -701,4 +701,4 @@ To continue the Active Directory series, explore [Group Policy and Account Manag
 
 Thank you for following along with this project. Your time and effort in learning and implementing these concepts are greatly appreciated. 
 
-☎️ For any questions or just to connect you can reach me at: www.linkedin.com/in/vincentchachere
+☎️ For questions or to connect you can reach me at: www.linkedin.com/in/vincentchachere
