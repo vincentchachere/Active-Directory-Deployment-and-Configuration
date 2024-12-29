@@ -292,11 +292,9 @@ Log out / close the connection to DC-1 and **log back** in **with** the **new do
 
 </summary>
 
-To join Client-1 to the Domain Controller we will first set Client-1’s DNS servers settings to DC-1’s Private IP address, which will allow the client-1 VM to resolve domain-related DNS queries through the Domain Dontroller (DC-1).
+To join Client-1 to the Domain Controller we will first **set Client-1’s DNS servers** settings to **DC-1’s Private IP address**, which will allow the client-1 VM to resolve domain-related DNS queries through the Domain Dontroller (DC-1).
 
-<ins>Go To</ins>:
-
-- Resource Group: `Active-Directory-Lab` > VM: `Client-1` > `Network Settings` > Network Interface: `client-1408_z1` > `DNS servers`
+To do this go to your resourse group **Active-Directory-Lab** > **Client-1** > **Network Settings** > **Network Interface** (client-1408_z1) > **DNS servers**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2be62c15-ec58-4afe-8579-2e0bd3929243">
 
@@ -304,15 +302,9 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>Setting Client's DNS servers to DC-1's Private IP Address Go To</ins>:
+<ins>Setting Client's DNS servers to DC-1's Private IP Address</ins>:
 
-- Resource Group: `Active-Directory-Lab` > VM: `Client-1` > `Network Settings` > Network Interface: `client-1408_z1` > `DNS servers`
-
-- Select: `Custom`
-
-- Input: `DC-1's Private IP Address` (Example; mine is: 10.0.0.4)
-
-- Click: `Save` when done
+Within your DNS Servers dashboard select **Custom**, input **DC-1's Private IP Address** (10.0.0.4), click **save**, and wait for it to update.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c0e0d75a-6a25-4fd1-9c76-d50539b68c97">
 
@@ -320,11 +312,7 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>Now for the DNS Settings to sync in you must restart you Client-1's VM so</ins>:
-
-- Resource Group: `Active-Directory-Lab` > VM: `Client-1`
-
-- Restart: `Client-1` VM when done doing this
+For the DNS settings to sync we'll need to **restart Client-1** in the Azure portal. So go to your resource group, select **Client-1**, and click **restart**.
 
 *If you do not restart your Client-1 VM after setting it's DNS Server to DC-1’s Private IP address then it will not successfully allow the client-1 VM to resolve domain-related DNS queries through the domain controller (DC-1).*
 
@@ -334,15 +322,11 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>Log into Client-1 as the original local admin (labuser) and</ins>:
+**Login to Client-1** as the original local admin user (**labuser**), open **PowerShell**, and run the command **ipconfig /all** to verify DC-1's Private IP Address got synced to Client-1.
 
-- Open: `PowerShell`
+The **DNS Server** should show **DC-1’s Private IP Address** as shown in the image below.
 
-- Run: `ipconfig /all`
-
-- The `DNS Server` should show DC-1’s Private IP Address as shown in the image below.
-
-*If the DNS server on Client-1 is not set to DC-1's private IP (e.g., it shows 168.63.129.16), update the DNS settings manually to DC-1's private IP. Restarting Client-1's VM may also help apply the changes. If successful, the client may log you out, indicating it's trying to connect to the domain.*
+*If the DNS server on Client-1 is not set to DC-1's private IP (e.g., it shows 168.63.129.16), update the DNS settings manually to DC-1's private IP. Restarting Client-1's VM may also help apply the changes. If successful, Client-1 may log you out, indicating it's trying to connect to the domain.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8641ddec-9a6c-4919-b3d6-cbd0f6bec77e">
 
@@ -350,13 +334,9 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>While still in Client-1 join it to the domain</ins>:
+While still in Client-1 join it to the domain by right-clicking **Start** and selecting **System**.
 
-- Right-Click: `Start`
-
-- Select: `System`
-
-*The Client-1 VM will restart when it joins the domain.*
+*Client-1 will restart when it joins the domain.*
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9cc81c81-20c3-417f-8f4a-9231cb209170">
 
@@ -364,11 +344,7 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>Within System Settings</ins>:
-
-- Select: `Rename this PC (advanced)`
-
-- Select: `Change`
+Within System settings select **Rename this PC (advanced)** and select **Change**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6e459538-9285-4016-8026-a3510456a931">
 
@@ -376,13 +352,7 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>Within Computeer Name/Domain Changes</ins>:
-
-- Select: `Domain`
-
-- Type In: `mydomain.com`
-
-- Click: `OK`
+Select **Domain**, input **mydomain.com**, and click **OK**.
 
 *Notice Computer Name is Client-1 not DC-1*
 
@@ -392,13 +362,7 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>When the Windows Security Window Pops Up</ins>:
-
-- Type In: `mydomain.com\jane_admin`
-
-- Password: `WhateverYouCreated`
-
-- Select: `OK`
+Input the domain admin user accouunt you created: **mydomain.com\jane_admin**, input **Password**, and select **OK**.
 
 *Client-1 VM will restart after this*
 
@@ -408,9 +372,7 @@ To join Client-1 to the Domain Controller we will first set Client-1’s DNS ser
 <br>
 <br>
 
-<ins>When this pops up</ins>:
-
-Select: `OK`
+Select **OK**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/614eb7b1-1cad-441a-8e16-65f15b690e7f">
 
@@ -418,9 +380,7 @@ Select: `OK`
 <br>
 <br>
 
-<ins>When this pops up</ins>:
-
-- Select: `Restart Now`
+Select **Restart Now**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/6bbc2ad2-a1a6-45ef-952f-1a19405cab2b">
 
@@ -428,15 +388,7 @@ Select: `OK`
 <br>
 <br>
 
-<ins>Log back into the Domain Controller and verify Client-1 made it into ADUC</ins>:
-
-- Log into DC-1 as: `mydomain.com\jane_admin`
-
-- Open: `Active Directory Users and Computers (ADUC)`
-
-- Expand: `mydomain.com`
-
-- Select: `Computers`
+Log back into DC-1 as your domain admin user (mydomain.com\jane_admin) and verify Client-1 made it into ADUC. So open **ADUC**, expand **mydomain.com**, and select **Computers**.
 
 *If you do not see Client-1 in there **Refresh** ADUC.*
 
@@ -446,11 +398,9 @@ Select: `OK`
 <br>
 <br>
 
-<ins>Create another Organizational Unit called CLIENTS</ins>:
+Create another Organizational Unit called **_CLIENTS**.
 
 *We will place Client-1 inside this folder for organizational purposes.*
-
-- Name: `_CLIENTS`
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/9738fa42-b995-4983-b302-d9a869bc0711">
 
@@ -458,17 +408,7 @@ Select: `OK`
 <br>
 <br>
 
-<ins>Within Active Directory Users and Computers</ins>:
-
-- Click: `Computers`
-
-- Right-Click: `Client-1`
-
-- Select: `Move`
-
-- Select: `_CLIENTS`
-
-- Click: `OK`
+Within **ADUC** drap and drop **Client-1** into the **_CLIENTS** folder or open the **Computers** folder, right-click **Client-1**, select **Move**, select **_CLIENTS**, and click **OK**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/a1b031ec-9d4d-4fee-b5ad-f524b2b8e4e5">
 
@@ -476,9 +416,7 @@ Select: `OK`
 <br>
 <br>
 
-<ins>Within Active Directory Users and Computers</ins>:
-
-Click: `_CLIENTS` and you will see Client-1 inside there
+Open the **_CLIENTS** folder and verify **Client-1** is in there.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f06306b1-27cd-4a4e-878e-fd77c3c1cfb7">
 
