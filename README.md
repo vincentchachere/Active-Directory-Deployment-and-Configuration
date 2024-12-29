@@ -9,16 +9,13 @@
 <br>
 
 <h1 align="center">Active Directory Deployment and Configuration</h1> 
-<br>
+
+This is the second project in the [comprehensive series of tutorials](https://github.com/vincentchachere/azure-on-prem-ad) on Azure and Active Directory implementation. It simulates an enterprise Active Directory setup in Azure, where we'll deploy and configure Active Directory, create groups and user accounts, then verify the credentials, authentication, and permissions by logging into a client VM with manually generated users. Key topics include AD installation, forest creation, user management, domain integration, and custom Remote Desktop access, providing a strong foundation for future projects.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/5d4b8c68-d1a6-4a4e-93e3-d8b8602d9123" height="85%" width="85%" alt="9"/><br />
 </p>
 <br />
-
-## Lab Overview
-
-This lab builds on the previous one [here](https://github.com/vincentchachere/azure-on-prem-ad). It simulates an enterprise Active Directory setup in Azure, where you'll deploy and configure Active Directory, create groups and user accounts, then verify the credentials, authentication, and permissions by logging into a client VM with manually generated users. Key topics include AD installation, forest creation, user management, domain integration, and custom Remote Desktop access, providing a strong foundation for future projects.
 
 ## On-Premises Active Directory Deployed in the Cloud (Azure)
 Active Directory essentially manages user accounts, passwords, permissions, and devices at large scale. This tutorial explains how to implement on-premises Active Directory in Azure Virtual Machines.
@@ -59,9 +56,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 </summary>
 
-<ins>Go to the Domain Controller (DC-1) and in Server Manager Dashboard</ins>:
-
-- Click: `Add roles and features`
+Go to the **Domain Controller (DC-1)** and in the Server Manager Dashboard click **Add roles and features**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4109a1e0-694c-4404-9109-4c69f23ca2ce">
 
@@ -69,9 +64,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 <br>
 <br>
 
-<ins>Click Next until reaching the Server Roles section then</ins>:
-
-- Select: `Active Directory Domain Services`
+Click **Next** until reaching the Server Roles section then select **Active Directory Domain Services**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/612caea1-964c-4197-892d-fd3aa833c562">
 
@@ -81,7 +74,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 <ins>Within this portion</ins>:
 
-- Click: `Add Features`
+Click **Add Features**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3fa6a381-f5b0-4c94-bb48-794bea14b10b">
 
@@ -91,11 +84,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 <ins>Click Next until reaching the Confirmation tab then</ins>:
 
-- Check the: `Restart the destination server automatically if required` Box
-
-- Click: `Yes`
-
-- Click: `Install`
+Check the **Restart the destination server automatically if required** box, click **Yes**, then **Install**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/81812bf1-e8b9-48f7-9507-fa4074af53c4">
 
@@ -105,7 +94,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 <ins>When that's done installing</ins>:
 
-- Click: `Close`
+Click **Close**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/7c73b736-cf0e-4545-a6d9-683b9ecf90ea">
 
@@ -119,11 +108,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 </summary>
 
-<ins>Towards the top-right corner of the Server Manager window, there will be a flag and a yellow triangle ⚠️ symbol</ins>.
-
-- Click: `Flag with Triangle`
-
-- Click: `Promote this server to a domain controller`
+Towards the top-right corner of the Server Manager window, there will be a flag and a yellow triangle ⚠️ symbol. Click the **Flag with Triangle** and **Promote this server to a domain controller**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/377ca48e-b056-46a5-8504-9afa07a31297">
 
@@ -133,11 +118,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 <ins>Within the Deployment Configuration tab</ins>
 
-- Select: `Add a new forest`
-
-- Root domain name: `mydomain.com`
-
-- Click: `Next`
+Select **Add a new forest**, name the Root domain **mydomain.com**, and click **Next**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/47cd8d56-987c-4a4e-b2b8-4f586e2f85e8">
 
@@ -147,9 +128,9 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 <ins>Within the Domain Controller Options tab</ins>:
 
-- Give it a DSRM password (*This is required but it will not be used in this tutorial*).
+Give it a DSRM password (*This is required but it will not be used in this tutorial*).
 
-- Click: `Next`
+Click **Next**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/fedd52a0-48d0-4c63-8adb-0c824671e1ae">
 
@@ -159,7 +140,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 <ins>Within the DNS Options tab</ins>:
 
-- Uncheck: `Create DNS delegation`
+Uncheck **Create DNS delegation** and click **Next**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/35e80bf5-5348-4c1e-94c9-68cfe5f88de2">
 
@@ -169,7 +150,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 <ins>Click Next until you reach the Prerequisites Check tab then</ins>:
 
-- Click: `Install`
+Click **Install**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/8d940c8e-4b2a-49be-a7af-3c8ad8a840f3">
 
@@ -177,7 +158,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 <br>
 <br>
 
-<ins>The DC-1 will now restart to complete its promotion to a Domain Controller</ins>.
+The DC-1 will now restart to complete its promotion to a Domain Controller.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/126fa108-df23-44f3-87ef-b1f58cfe7aea">
 
@@ -185,13 +166,9 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 <br>
 <br>
 
-<ins>Now that your DC-1 VM is a domain controller, you need to decide how to log in: as a local user on your client VM or as a domain user on the domain controller. This means clarifying two things: which domain to use and which user account to use.</ins>
+Now that DC-1 is officially a domain controller, we'll need to decide how to log in: as a **local user** on Client-1 or as a **domain user** on the domain controller. This means clarifying two things: **which domain** to use and **which user account** to use.
 
-- For this lab you can log back into DC-1 as:
-
-  - Username: `mydomain.com\labuser` (or whatever you made when creating your DC-1 VM)
-
-  - Password: `TheSamePasswordYou'veBeenUsing`
+For this lab, we'll log back into DC-1 as a local user with the username **mydomain.com\labuser** (or whatever you made when creating your Domain Controller (DC-1)) and enter the password you created.
 
 *Make sure to use a backslash ( \ ) NOT a forward slash ( / ) or you will not be able to login.*
 
@@ -207,9 +184,9 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 </summary>
 
-Now that you're logged back into DC-1 as local user: domain.com\labuser, create two organizational units called _EMPLOYEES and _ADMINS, then add a new domain admin user. Mine will be named Jane Doe (You can name yours the same or something different, just remember it).
+Now that we're logged back into DC-1 as local user: **domain.com\labuser**, create **two organizational units** called **_EMPLOYEES** and **_ADMINS**, then **add** a **new domain admin user**. Mine will be named Jane Doe (You can name yours the same or something different, just remember it).
 
-- Go To: `Active Directory Users and Computers` (ADUC)
+After all that, go to **Active Directory Users and Computers (ADUC)**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/190b5ddf-a472-4fc6-8195-819cab80ada6">
 
@@ -217,11 +194,7 @@ Now that you're logged back into DC-1 as local user: domain.com\labuser, create 
 <br>
 <br>
 
-<ins>Within Active Directory Users and Computers</ins>:
-
-Create an Organizational Unit (OU) called “_EMPLOYEES”
-
-- Right-Click: `domain.com` > Select: `New` > Select: `Organizational Unit`
+Once inside Active Directory Users and Computers (ADUC) create the first Organizational Unit (OU) called **_EMPLOYEES**. So to do this right-click **domain.com**, click **New**, and select **Organizational Unit**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/eb3f4120-b273-4901-b111-75081f98ea10">
 
@@ -229,17 +202,11 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Within New Object - Organzational Unit</ins>:
+Within the New Object - Organzational Unit window name organizational unit **_EMPLOYEES**.
 
-- Name: `_EMPLOYEES`
+*Make sure to spell it exactly as you see it or the scripts and policies referencing may fail.*
 
-*Make sure to spell it exactly as you see it or the scripts and policies referencing it may fail.*
-
-<ins>Remember to Create the ADMINS Organizational Unit</ins>:
-
-- Right-Click: `domain.com` > Select: `New` > Select: `Organizational Unit`
-
-- Name: `_ADMINS`
+Create the second organizational unit the same way and name it **_ADMINS**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/20ee7889-bf7a-4925-8d71-23711ed14f00">
 
@@ -247,9 +214,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Back in Active Directory Users and Computers Create Your Domain User</ins>:
-
-- Click: `_ADMINS` > Right-Click: `the empty space` > Select: `New` > Select: `User`
+Back in Active Directory Users and Computers (ADUC) create your domain user. To do this click the **_ADMINS folder**, within the _ADMINS folder: right-click the **empty space**, select **New**, then select **User**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bb799a7b-360b-455b-a480-f1b35549135f">
 
@@ -257,29 +222,15 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Within New Object - User</ins>:
+Within the New Object - User window name your domain user's first name **Jane**, last name **Doe**, change user logon name to: **jane_admin** (*The first name of your created domain user then underscore admin.*), and click **Next**.
 
-- First Name: `Jane`
-
-- Last Name: `Doe`
-
-- Change User Logon Name To: `jane_admin` (The first name of your created domain user then underscore admin.)
-
-- Click: `Next`
-
-<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/29c7bceb-57a0-48d9-9763-6776b87e65a5">
+<img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3a4ba425-6ea3-4585-99a6-f9d296bf33aa">
 
 <br>
 <br>
 <br>
 
-<ins>Within New Object - User</ins>:
-
-- Password: `SomethingYouCanRemember`
-
-- Check: `Password never expires` (Normally you do not want to do this, but for the simplicity of the lab we will.)
-
-- Click: `Next`
+Within the New Object - User window create a password you can remember (*You will use this to login with your domain admin user account - mydomain.com\jane_admin - from now on.*), check the **Password never expires** (*Normally you do not want to do this, but for the simplicity of the lab we will.*), and click **Next**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/f22c31e6-776a-4ad0-8c55-5a9185b45e4b">
 
@@ -287,9 +238,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Within New Object - User</ins>:
-
-- Click: `Finish`
+Click **Finish**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/dcb94011-6685-4c85-b501-7a0834d0b1d1">
 
@@ -297,13 +246,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Back in Active Directory Users and Computers</ins>
-
-- Click: `_ADMINS`
-
-- Right-Click: `Jane Doe` (The Name of Your Domain User)
-
-- Select: `Properties`
+Back in Active Directory Users and Computers (ADUC) click **_ADMINS**, right-click **Jane Doe** (your domain admin user account), and select **Properties**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/d4b8977b-e96e-4da4-b683-4a8115ea2fb7">
 
@@ -311,11 +254,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Within Jane Doe Properties</ins>:
-
-- Go To: `Member Of`
-
-- Select: `Add`
+Within the Jane Doe (domain admin user account) Properties go to the **Member Of** tab, then select **Add**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/082a8038-dd74-407b-99f1-ba4c43210405">
 
@@ -323,13 +262,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Within the Select Groups Windows</in>:
-
-- Type In: `Domain Admins`
-
-- Click: `Check Names`
-
-- Click: `OK`
+Within the Select Groups window input **Domain Admins**, click **Check Names**, and click **OK**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/c3fd5780-1fba-4847-9f73-89502b69ac53">
 
@@ -337,11 +270,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Back in Jane Doe Properties</ins>:
-
-- Click: `Apply`
-
-- Click: `OK`
+Back in the Jane Doe (domain admin user account) Properties click **Apply** and click **OK**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/06db3f2f-a19e-4baf-adc4-22aa750bef4a">
 
@@ -349,9 +278,7 @@ Create an Organizational Unit (OU) called “_EMPLOYEES”
 <br>
 <br>
 
-<ins>Now you can log out / close the connection to DC-1 and</ins>:
-
-- Log back into DC-1 as: `mydomain.com\jane_admin` (the first name of your domain user then underscore admin with mydomain.com attached to the front)
+Log out / close the connection to DC-1 and **log back** in **with** the **new domain admin user account** (mydomain.com\jane_admin) you just created.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/3c0508eb-56f6-4de5-9938-89324722b547">
 
@@ -697,7 +624,7 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 
 With the Active Directory infrastructure now fully set up, deployed, and configured, we've established a solid foundation for centralized domain management. We covered installing and promoting a Domain Controller, creating users, groups, and organizational units, setting up DNS, and testing connectivity between client machines and the server. This infrastructure enables streamlined management, enhanced security, and scalability for future needs. Always document your setup for reference and maintain regular backups to ensure system reliability.
 
-To continue the Active Directory series, explore [Group Policy and Account Management](https://github.com/vincentchachere/Group-Policy-and-Managing-Accounts) or [Network File Shares and Permissions](https://github.com/vincentchachere/Network-File-Shares-and-Permissions).
+To continue the Active Directory series, explore the [Group Policy and Account Management](https://github.com/vincentchachere/Group-Policy-and-Managing-Accounts) or [Network File Shares and Permissions](https://github.com/vincentchachere/Network-File-Shares-and-Permissions) lab.
 
 Thank you for following along with this project. Your time and effort in learning and implementing these concepts are greatly appreciated. 
 
