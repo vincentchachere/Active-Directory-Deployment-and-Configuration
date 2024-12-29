@@ -430,13 +430,7 @@ Open the **_CLIENTS** folder and verify **Client-1** is in there.
 
 </summary>
 
-<ins>Log back into Client-1 as: mydomain.com\jane_admin then</ins>:
-
-- Go To: `System Settings`
-
-- Select: `About`
-
-- Select: `Remote Desktop`
+Log back into Client-1 as your domain admin user (mydomain.com\jane_admin) and open **System Settings**, select **About**, then select **Remote Desktop**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/0e2f3ecd-a2ed-4441-ac67-47a135955174">
 
@@ -444,9 +438,7 @@ Open the **_CLIENTS** folder and verify **Client-1** is in there.
 <br>
 <br>
 
-<ins>Within Remote Desktop System Settings</ins>:
-
-- Select: `Select users that can remotely access this PC`
+Within the Remote Desktop System Settings select **Select users that can remotely access this PC**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/de0fa8ee-0fc9-46a3-9338-ac1611dd47c8">
 
@@ -454,13 +446,7 @@ Open the **_CLIENTS** folder and verify **Client-1** is in there.
 <br>
 <br>
 
-<ins>Within Select Users or Groups</ins>:
-
-- Type In: `Domain Users`
-
-- Click: `Check Names`
-
-- Click: `OK`
+Input **Domain Users**, click **Check Names**, and click **OK**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/45f64722-e8f2-4651-93d3-be3d2a5beae2">
 
@@ -468,13 +454,7 @@ Open the **_CLIENTS** folder and verify **Client-1** is in there.
 <br>
 <br>
 
-<ins>Log back into the Domain Controller (DC-1) as</ins>: mydomain.com\jane_admin
-
-- Search: `Powershell ISE`
-
-- Right-Click: `Powershell ISE`
-
-- Select: `Run as Administrator`
+Log back into DC-1 as your domain admin user (mydomain.com\jane_admin) and open **PowerShell ISE as an administrator**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/5066bc80-075f-44cb-b81d-e999f764a6ef">
 
@@ -482,9 +462,7 @@ Open the **_CLIENTS** folder and verify **Client-1** is in there.
 <br>
 <br>
 
-<ins>In the top right corner of PowerShell ISE</ins>:
-
-Click: the `Script` drop down arrow
+In the top right corner of PowerShell ISE click the **Script** drop down arrow.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/4609810b-6178-45ba-8552-9eaadc3eafe5">
 
@@ -492,9 +470,7 @@ Click: the `Script` drop down arrow
 <br>
 <br>
 
-<ins>Within PowerShell ISE</ins>:
-
-*Copy, Paste, then Run the script below into PowerShell ISE:*
+**Copy**, **Paste**, and **Run the script** that's in the link below into PowerShell ISE.
 
 https://github.com/vincentchachere/Generate-Names-Create-Users/blob/main/AD
 
@@ -508,9 +484,9 @@ https://github.com/vincentchachere/Generate-Names-Create-Users/blob/main/AD
 
 ### 13. ) Attempt to log into Client-1 with one of the Created Users
 
-When finished, open Active Directory Users and Computers (ADUC) and observe the accounts in the _EMPLOYEES Oganizational Unit (OU).
+When finished, open **ADUC** and **observe the generated accounts** in the **_EMPLOYEES** Oganizational Unit (OU).
 
-- Select: `A Created User`
+Select **A Random Created User** (Example: bat.pac)
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/ecff73ad-7aa5-489f-a36c-f539dc699328">
 
@@ -518,9 +494,7 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 <br>
 <br>
 
-<ins>Attempt to log into Client-1 with one of the accounts</ins>
-
-*Take note of the password in the script*
+**Login to Client-1** with one of the **generated user accounts** (mydomain.com\bat.pac).
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/2a0a8d88-09f1-43d6-8be6-69b43dc97a16">
 
@@ -528,9 +502,7 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 <br>
 <br>
 
-<ins>Once logged in</ins>:
-
-- Go To: `Command Prompt`
+Once logged in to Client-1 open **Command Prompt**.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/63b0c4aa-986d-42cc-888e-9fe67fd1a9b0">
 
@@ -538,9 +510,7 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 <br>
 <br>
 
-<ins>Once inside Command Prompt</ins>:
-
-*Notice the created user's name displayed in the path.*
+Notice the created user's name (*bat.pac*) displayed in the path.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/bbb2ff68-8c58-4936-a0ff-503cb2584124">
 
@@ -548,11 +518,9 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 <br>
 <br>
 
-<ins>Navigate to File Explorer</ins>:
+Open **File Explorer** and follow the path: **This PC** > **Windows (C:)** > **Users**
 
-- Go to: `This PC` > `Windows (C:)` > `Users`
-
-*Take notice that the created user's name is shown in here because you logged into the Client VM with that account.*
+You'll see the created user's name (*bat.pac*) shown in here since you logged into Client-1 with that account.
 
 <img width="800" alt="isolated" src="https://github.com/user-attachments/assets/19c207bd-c074-4492-a880-a1c43276c21c">
 
