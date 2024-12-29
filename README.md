@@ -697,7 +697,7 @@ When finished, open Active Directory Users and Computers (ADUC) and observe the 
 
 With the Active Directory infrastructure now fully set up, deployed, and configured, we've established a solid foundation for centralized domain management. We covered installing and promoting a Domain Controller, creating users, groups, and organizational units, setting up DNS, and testing connectivity between client machines and the server. This infrastructure enables streamlined management, enhanced security, and scalability for future needs. Always document your setup for reference and maintain regular backups to ensure system reliability.
 
-To continue the Active Directory series, explore [Group Policy and Account Management](https://github.com/vincentchachere/Group-Policy-and-Managing-Accounts/blob/main/README.md) or [Network File Shares and Permissions](https://github.com/vincentchachere/Network-File-Shares-and-Permissions).
+To continue the Active Directory series, explore [Group Policy and Account Management](https://github.com/vincentchachere/Group-Policy-and-Managing-Accounts) or [Network File Shares and Permissions](https://github.com/vincentchachere/Network-File-Shares-and-Permissions).
 
 Thank you for following along with this project. Your time and effort in learning and implementing these concepts are greatly appreciated. 
 
