@@ -42,7 +42,7 @@ Active Directory essentially manages user accounts, passwords, permissions, and 
 
 - Install Active Directory
 - Promote DC-1 to Domain Controller
-- Create an Admin in Acitive Directory
+- Create an Admin in Active Directory
 - Join Client-1 to Domain
 - Setup Remote Desktop for Non-Administrative Users
 
